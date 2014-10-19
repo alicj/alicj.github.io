@@ -1,0 +1,24 @@
+html {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+}
+
+body {
+}
+
+header {
+	max-width: 960px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 80px;
+}
+
+.construction {
+	text-align: center;
+	width: 100%;
+	min-height: 685px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('../images/website_under_construction1.png');
+}
