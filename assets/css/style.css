@@ -13,10 +13,10 @@ header {
 	line-height: 80px;
 }
 
-.construction {
+html {
 	text-align: center;
 	width: 100%;
-	min-height: 685px;
+	min-height: 600px;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center center;
