@@ -3,12 +3,42 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>SimpleTabs</title>
 	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
 </head>
 <body>
 	<header>
-		<h1>SimbpleTabs</h1>
+		<h1 class="text-center">SimpleTabs</h1>
 	</header>
+
+	<div class="container text-center">
+		text
+		<button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	</div>
+
+
+
+	<script>
+		var rows = 3;
+		var columns = 3;
+		var arrayOfTabs = [];
+
+		function Tab(url) {
+			this.url = url;
+			this.title = ""; }
+
+		function initializeTabs(rows, columns) {
+			var totalTabs = rows * columns;
+			for (var i = 0; i < totalTabs; i++) {
+				var newTab = new Tab("");
+				arrayOfTabs += newTab;
+			}
+		}
+
+
+	</script>
+	<script src="lib/bootstrap/bootstrap.min.js"></script>
 </body>
 </html>

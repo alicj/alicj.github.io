@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>SimpleTabs</title>
+	<link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/sidebar-trans/css/component.css">
+	<link rel="stylesheet" href="style/style.css">
+
+	<script src="lib/jquery-1.11.1.min.js"></script>
+
+
+</head>
+<body>
+    <div id="st-container" class="st-container">
+		<nav class="st-menu st-effect-9" id="menu-9">
+			<!-- sidbar content -->
+			<form>
+				<div class="col-sm-3"><label for="inputPassword" class="control-label">Row</label></div>
+				<div class="col-sm-9">
+	  				<input type="text" class="form-control" id="inputPassword" placeholder="Row">
+				</div>
+
+				<div class="col-sm-3"><label for="inputPassword" class="control-label">Row</label></div>
+				<div class="col-sm-9">
+	  				<input type="text" class="form-control" id="inputPassword" placeholder="Row">
+				</div>
+			</form>
+		</nav>
+
+
+		<!-- content push wrapper -->
+		<div class="st-pusher">
+
+			
+			<!-- wrapper for the content -->
+			<div class="st-content">
+				<!-- extra div for emulating position:fixed of the menu -->
+				<div class="st-content-inner">
+					<!-- content -->
+					<div id="st-trigger-effects">
+						<button id="menu" data-effect="st-effect-9">
+						    <div class="bg">Menu</div>
+						</button>
+					</div>
+					<div class="container-fluid text-center">
+
+						<header>
+							<h1 class="text-center">SimpleTabs</h1>
+						</header>
+
+						<!-- <button type="button" class="close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button> -->
+
+						<div class="tab-group"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<script>
+		var rows = 3;
+		var columns = 3;
+		var totalTabs = rows * columns;
+		var arrayOfTabs = [];
+
+		function Tab(url) {
+			this.url = url;
+			this.title = url; }
+
+		function initializeTabs(rows, columns) {
+			for (var i = 0; i < totalTabs; i++) {
+				var newTab = new Tab(i);
+				arrayOfTabs[i] = newTab;
+			}
+		}
+
+		$(document).ready(function() {
+			initializeTabs(rows, columns);
+			var counter = 0;
+			$.each(arrayOfTabs, function(index, val) {
+				if (index % rows == 0) {
+					counter ++;
+					$('.tab-group').append('<div class="row'+counter+'"></div>');
+				}
+				$('.row'+counter).append('<div class="tab">title: '+val.title +'</div>');
+			});
+		});
+
+
+	</script>
+	<script src="lib/bootstrap/bootstrap.min.js"></script>
+	<script src="lib/sidebar-trans/js/classie.js"></script>
+	<script src="lib/sidebar-trans/js/sidebarEffects.js"></script>
+</body>
+</html>
