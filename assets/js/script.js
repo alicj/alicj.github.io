@@ -22,14 +22,16 @@ function loadPage() {
 	$("#ajax-content").hide();
 	switch(curPage){
 		case "":
-			$("#ajax-content").load('assets/pages/index.html');
+			$("#ajax-content").load('assets/pages/index.html', function(){
+				$(this).fadeIn('400');
+			});
 			break;
 		default:
-			$("#ajax-content").load('assets/pages/'+curPage+'.html');
+			$("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
+				$(this).fadeIn('400');
+			});
 	}
 	setNavActive(curPage);
-	$("#ajax-content").fadeIn('fast');
-
 }
 
 function setNavActive(curPage){
