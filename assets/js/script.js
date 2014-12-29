@@ -3,22 +3,14 @@ var page = "";
 $(document).on('click', '.navAjax', function (event) {
 	event.preventDefault();
 	page = $(this).attr('href').replace("/","");
-	setPage(page)
-	loadPage();
+	loadPage(page);
 });
 
 $(document).ready(function() {
 	loadPage();
 });
 
-function setPage(curPage){
-	localStorage.setItem('lastViewdPage', curPage)
-}
-
-function loadPage() {
-	var isValid = localStorage.getItem('lastViewdPage');
-	var curPage = isValid ? isValid : "";
-
+function loadPage(curPage="") {
 	$("#ajax-content").hide();
 	switch(curPage){
 		case "":
