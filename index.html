@@ -3,45 +3,87 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Home | Zichen Jiang</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Home | Alic Jiang</title>
 	<link rel="stylesheet" href="assets/css/style.css">
 	<!-- JQuery -->
 	<script src="assets/js/jquery-1.11.2.min.js"></script>
 	<!-- Bootstrap -->
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/lib/bootstrap/bootstrap.min.css">
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="assets/lib/bootstrap/bootstrap-theme.min.css">
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+	<script src="assets/lib/bootstrap/bootstrap.min.js"></script>
 </head>
 <body>
-	<header>
+	<header id="header">
 		<div class="container">
-			<h1>Alic Jiang</h1>
+			<a href=""><h1>Alic Jiang</h1></a>
 
-			<div id="nav-main">
-				<ul>
-					<li>&nbsp</li>
-					<!-- <li>Home</li>
-					<li>About me</li>
-					<li>Projects</li>
-					<li>Resume</li> -->
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="">Home</a></li>
+					<li><a href="">My story</a></li>
+					<li><a href="">Projects</a></li>
+					<li><a href="">Resume</a></li>
 				</ul>
 			</div>
 		</div>
 	</header>
 
-	<div class="construction"></div>
+	<div id="ajax-content" class="container">
+		
+		<div id="sidebar" class="col-xs-2 col-md-2 hidden-sm">
+			<img class="profile-pic" width="" src="assets/img/alicjiang.jpg" alt="Alic Jiang">
+			<!-- <table class="table">
+				<tr>
+					<td>Item1</td>
+					<td>Item1</td>
+				</tr>
+				<tr>
+					<td>Item1</td>
+					<td>Item1</td>
+				</tr>
+				<tr>
+					<td>Item1</td>
+					<td>Item1</td>
+				</tr>
+				<tr>
+					<td>Item1</td>
+					<td>Item1</td>
+				</tr>
+				<tr>
+					<td>Item1</td>
+					<td>Item1</td>
+				</tr>
+			</table> -->
+		</div>
 
+		<div id="main" class="col-xs-12 col-md-10">
+			<p>Hello there!</p>
+			<p>My name is Alic jiang. I major in <code>&ltComputer Science&gt</code> in McMaster University located in Hamilton, ON Canada.</p>
 
+			<p>I love everything about <code>&lttechnology&gt</code>. Though I do love hardware <span class="text-muted">(staring at a motherboard is just so peaceful and extrodinary)</span>, I mainly focus on software, especially <code>&ltWeb Development&gt</code>.</p>
 
+			<p>I also love food, more specificly, Chinese food. By the way I'm from China. I actually don't miss it too much, I guess Canada is just less crowded and more peaceful, plus I cook Chinese food myself and I quite enjoy my cooking. I love chocolate too. I even drink chocolate milk, given that I dislike milk.</p>
+
+			<p>I loving drawing too, and took class outside school for over 8 year. I like still life sketching and cartoon/anime drawing. Also I draw by pencil, not by sketchpad.</p>
+
+			<p>I also like music. I play a bit guitar myself, but I prefer listening to music, rather than playing it. I prefer music played with orchestra, so I guess I am towards classical music and opera.</p>
+		</div>
+
+	</div>
 
 	<footer class="footer">
 		<div class="container">
 			<div class="social_icons">
 				<a href="http://github.com/alicj" title="Github"><img src="assets/img/github-icon.png" alt="Github" height="30" width="30"></a>
 				<a href="http://ca.linkedin.com/in/alicj" title="LinkedIn"><img src="assets/img/linkedin-icon.png" alt="LinkedIn" height="30" width="30"></a>
+			</div>
+			<div class="footer-text">
+				<p class="text-muted">Created by Alic Jiang</p>
+			</div>
 		</div>
 	</footer>
 </body>
