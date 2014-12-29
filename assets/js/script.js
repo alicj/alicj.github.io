@@ -2,6 +2,7 @@
 
 $(document).on('click', '.navAjax', function (event) {
 	event.preventDefault();
+	console.log(event);
 	window.location.replace($(this).attr('href'));
 });
 
