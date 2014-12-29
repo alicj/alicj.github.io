@@ -39,6 +39,17 @@ p {
 	font-size: 16px;
 }
 
+.secrete {
+	color: white;
+	position: absolute;
+	bottom: 180px;
+	z-index: -1;
+}
+
+.white {
+	color: white;
+}
+
 /* Header
 -----------------------------------------------------------*/
 
