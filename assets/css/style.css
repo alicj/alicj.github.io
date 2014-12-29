@@ -1,6 +1,11 @@
 html {
-	font-family: 'Open Sans', sans-serif;
+/*	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
+*/
+}
+
+ul {
+	list-style: none;
 }
 
 body {
@@ -13,12 +18,10 @@ header {
 	line-height: 80px;
 }
 
-html {
-	text-align: center;
-	width: 100%;
-	min-height: 600px;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-image: url('../images/website_under_construction1.png');
+#nav-main {
+	border-top: 2px solid black;
+}
+
+#nav-main ul li {
+	float: left;
 }
