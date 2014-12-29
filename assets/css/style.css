@@ -1,3 +1,25 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
 html {
 /*	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
@@ -11,8 +33,10 @@ ul {
 body {
 }
 
+/* Header
+-----------------------------------------------------------*/
+
 header {
-	max-width: 960px;
 	margin: 0 auto;
 	text-align: center;
 	line-height: 80px;
@@ -24,4 +48,27 @@ header {
 
 #nav-main ul li {
 	float: left;
+}
+
+
+/* Body
+-----------------------------------------------------------*/
+.construction {
+	width: 100%;
+	min-height: 600px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('../img/website_under_construction1.png');
+}
+
+
+/* Footer
+-----------------------------------------------------------*/
+.footer {
+	padding: 20px 0;
+}
+
+.social_icons img {
+    opacity: 0.3;
 }
