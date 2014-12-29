@@ -65,11 +65,16 @@ header#header a {
 	color: #333;
 	font-size: 16px;
 	text-transform: capitalize;
+	background: none;
 }
 
-#navbar a:hover {
+#navbar a:hover, #navbar a:active{
 	color: rgb(76,158,217);
 	background: none;
+}
+
+#navbar a.current {
+	color: rgb(76,158,217);
 }
 
 /* Body
