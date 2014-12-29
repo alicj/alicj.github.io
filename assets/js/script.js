@@ -1,8 +1,11 @@
 var page = "";
+var clicked = false;
 
 $(document).on('click', '.navAjax', function (event) {
 	event.preventDefault();
+	if (page == $(this).attr('href').replace("/","")) return false;
 	page = $(this).attr('href').replace("/","");
+	clicked = true;
 	loadPage(page);
 });
 
@@ -15,7 +18,11 @@ function loadPage(curPage="") {
 	switch(curPage){
 		case "":
 			$("#ajax-content").load('assets/pages/index.html', function(){
-				$(this).fadeIn('400');
+				if(clicked) {
+					$(this).fadeIn('400');
+				}else{
+					$(this).show();
+				}
 			});
 			break;
 		default:
