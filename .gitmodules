@@ -4,3 +4,6 @@
 [submodule "simpleTabs"]
 	path = simpleTabs
 	url = https://github.com/AlicJ/simpleTabs.git
+[submodule "CyberBlaster"]
+	path = CyberBlaster
+	url = https://github.com/AlicJ/CyberBlaster.git
