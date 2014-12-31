@@ -27,7 +27,7 @@ function loadPage(curPage) {
     // CyberBlasters, etc be seperate pages
 	switch(curPage){
 		case "resume":
-			console.log('ARE YOU NOT ENTERTAINED???')
+			$('body').addClass('loading');
 			$('#ajax-content').css("min-height", $(document).innerHeight()-$('#header').innerHeight()-$('.footer').innerHeight()-20);
 			$("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
 				$(this).fadeIn('400');
@@ -35,6 +35,7 @@ function loadPage(curPage) {
 			});
 			break
 		default:
+			$('body').removeClass('loading');
 			$("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
 				if(clicked) {
 					$(this).fadeIn('400');
