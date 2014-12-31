@@ -246,7 +246,7 @@ Main components
   display: inline-block;
 }
 .cd-timeline-content p {
-  margin: 1em 0;
+  margin: 0.8em 0;
   line-height: 1.6;
 }
 .cd-timeline-content .cd-read-more {
@@ -302,7 +302,7 @@ Main components
     border-left-color: #E7F2FA;
   }
   .cd-timeline-content .cd-read-more {
-    float: left;
+    float: right;
   }
   .cd-timeline-content .cd-date {
     position: absolute;

@@ -3,25 +3,50 @@ var clicked = false;
 
 PROJECTS = [
 	{
-		title: "title1",
+		title: "AgentFlux",
+		note: "Web Developer Co-op @ AgentFlux Inc.",
 		type: "computer",
-		content: "content1",
-		date: "2014 Dec 12",
-		view: false
+		content: "\
+			I worked in a team of seven people to create a web application \
+			with JavaScript and HTML.\
+			I also worked with Zend Framework to create certain APIs.\
+			AgentFlux is an application across all platforms that provides \
+			real estate agents a revolutionary way to connect with their clients\
+			 - share properties with them and schedule appointments.\
+		",
+		date: "May - August 2014",
+		link: "http://agentflux.com/"
 	},
 	{
-		title: "title5",
-		type: "computer",
-		content: "content5",
-		date: "2014 Dec 14",
-		view: "GlossGallery/index.html"
+		title: "Gloss Gallery",
+		note: false,
+		type: "internet",
+		content: "\
+			A gallery made upon professor's request to hold the top animations \
+			written in Haskell submitted from class CS1JC3.\
+		",
+		date: "May 2014",
+		link: "GlossGallery/index.html"
 	},
 	{
-		title: "title8",
+		title: "Vshore Website",
+		note: false,
 		type: "computer",
+		content: "A website made for Vshore Inc. I used JavaScript to build \
+		several functions to reduce workload, like writting the header and the footer\
+		automatically in every page. I also made that gallery myself. Didn't know too much about \
+		responsive design back then. But the website does not break on a smaller screen.\
+		",
+		date: "October 2013",
+		link: "http://vshore.com/"
+	},
+	{
+		title: "Cyber Blaster",
+		note: "TechU.me Program",
+		type: "mobile",
 		content: "content8",
-		date: "2014 Dec 18",
-		view: false
+		date: "Janurary - June 2013",
+		link: "CyberBlaster/index.html"
 	}
 ]
 
@@ -86,7 +111,7 @@ function setNavActive(curPage){
 
 function renderProj (projList) {
 	$.each(projList, function(index, proj) {
-		console.log(proj);
+		// console.log(proj);
 		var block = $('<div></div>')
 						.addClass('cd-timeline-block')
 						.append($('<div></div>')
@@ -95,9 +120,11 @@ function renderProj (projList) {
 						.append($('<div></div>')
 							.addClass('cd-timeline-content')
 							.append($('<h2></h2>')
+								.addClass('title')
 								.append(proj.title)
 							)
 							.append($('<p></p>')
+								.addClass('content')
 								.append(proj.content)
 							)
 							.append($('<span></span>')
@@ -105,14 +132,23 @@ function renderProj (projList) {
 								.append(proj.date)
 							)
 						);
-		if (proj.view){
-			console.log(proj.view);
+		if (proj.link){
+			// console.log(proj.link);
 			$(block)
 				.find('.cd-date')
 				.before($('<a></a>')
 					.addClass('cd-read-more')
-					.attr('href', proj.view)
+					.attr('href', proj.link)
+					.attr('target', "_blank")
 					.append('View Project')
+				);
+		}
+		if (proj.note){
+			$(block)
+				.find('.content')
+				.before($('<p></p>')
+					.addClass('text-muted')
+					.append(proj.note)
 				);
 		}
 		$('#cd-timeline').append(block);
