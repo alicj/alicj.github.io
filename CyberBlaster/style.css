@@ -1,0 +1,397 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: mega;
+    src: url('Megatron.ttf') format("truetype");
+}
+body {
+    margin: 0px auto;
+    padding: 0px;
+    width: 1024px;
+    border-radius: 5px;
+    cursor:default;
+    font-family: mega;
+    background-color: rgb(34,34,34);
+    background-image: url('images/Playbook_landscape.png');
+    background-repeat: no-repeat;
+    background-position: center 50px;
+}
+ul {
+    list-style:none;
+    padding:0;
+}
+
+tr {
+    vertical-align: top;
+}
+
+table {
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.red {
+    color:red;
+}
+h2 {
+	line-height:140%;
+    margin: 15px 0 0 0;
+}
+p {
+	line-height:135%;
+}
+
+.shadowOverlay {
+    width: 1024px;
+    height: 600px;
+    position: absolute;
+    box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.68);
+    z-index: 999;
+    border-radius: 5px;
+    pointer-events: none;
+}
+/* Main menu styles*/
+#menu .bigger {
+    font-size:125%;
+}
+#splash {
+	margin-top:2%;
+	width:95%;
+	height:90%;
+	border:#1FFFFF 10px solid;
+    border-radius:4px;
+    opacity:0.95;
+}
+#main {
+	background:url(images/space.jpg) repeat scroll 0 0;
+	/*border:1px solid #999;*/
+    color:#00E8E8;
+	font-size:30px;
+	text-align:center;	
+    width: 1024px;
+    height: 600px;
+    margin: 180px auto 0;
+    border-radius: 5px;
+}
+#menu p, #menu h2, #menu .exit {
+	opacity:0.8;
+}
+#setting1, #help1, #highscore {
+    width:704px;
+}
+#setting1 li, #setting2 li {
+	margin: 15px 25px;
+    height: 70px;
+    line-height: 70px;
+}
+#setting1 table, #setting2 table {
+    text-align: center;
+    margin: 0 auto;
+}
+#highscore li {
+	height: 50px;
+	line-height: 50px;
+	width: 500px;
+	margin: 0 0 0 100px;
+}
+#highscore .score {
+	float:left;
+}
+#highscore .user {
+	float:right;
+}
+#menu div:active {
+	background:#1FFFFF;
+    color:#090708;
+}
+
+#menu {
+    color:#1FFFFF;
+	background:#aaa;
+	float:right;
+	height:100%;
+	width:320px;
+	text-align:right;
+    opacity:0.9;
+    border-radius: 0 5px 5px 0;
+    -webkit-box-shadow: ;
+    -moz-box-shadow: ;
+}
+
+#menu h2 {
+    font-size:160%;
+	margin:0 15px 0 0;
+	line-height: 72px;
+}
+#menu div {
+    border-radius:4px;
+	border:#1FFFFF 2px solid;
+    margin:13px 10px;
+}
+#menu div p {
+    padding: 12px 15px 14px 0;
+    margin: 0;
+}
+.newgame {
+	color:#FF2B2B;
+}
+#save {
+    font-size: 24px;
+}
+#save div {
+	border-radius: 4px;
+	border: #00E8E8 2px solid;
+	width: 540px;
+	padding: 8px;
+	margin: 54px 0 0 5px;
+	float: left;
+}
+#save .delete {
+	border-radius: 4px;
+	border: #00E8E8 2px solid;
+	padding: 8px;
+	margin: 54px 0 0 5px;
+	float: left;
+}
+#save div:active, #save .delete:active {
+    background:#00E8E8;
+    color:#090708;
+}
+#namefield {
+    top: 30%;
+    position: relative;
+}
+#namefield .name {
+    font-family: mega;
+    font-size: 24px;
+    border-radius: 16px;
+    border: none;
+    margin: 0 25px;
+    padding: 1px 10px;
+    width: 160px;
+    position: relative;
+    top: -3px;
+    text-align: center;
+    background-color: #999;
+    color: #00E8E8;
+}
+#namefield span {
+    width:100px;
+    height:25px;
+}
+#credit h2 {
+    margin:40px 0 0;
+}
+#credit p {
+    margin:15px 0;
+}
+#credit img {
+    border-radius:4px;
+    border:#1FFFFF 2px solid;
+    margin-bottom:10px;
+	background-color:white;
+}
+#setting1 li:active, #setting2 li:active, .yes:active, .no:active, #namefield span:active {
+    color:red;
+}
+#help, #setting {
+    width:704px;
+}
+.helpText {
+    font-size:27px;
+}
+
+#credit {
+    /*position:relative;
+    top:600px;*/
+	background-repeat: no-repeat;
+	height:600px;
+}
+
+.exit p {
+    padding:0;
+    margin:0;
+    margin-right:15px;
+}
+
+/* In game layout */
+#myCanvas {
+    width:75%;
+    height:600px;
+    background:url(images/space.jpg) repeat scroll 0 0;
+    float:left;
+}
+#gamefield {
+    background:#999;
+    /*border:1px solid #999;*/
+    color:#67EFE9;
+    font-size:30px;
+    width: 1024px;
+    height: 600px;
+    position: relative;
+    margin: 180px auto 0;
+    border-radius: 5px;
+}
+#ui {
+    background:url('images/InterfaceBackground.png');
+    float:right;
+    height:600px;
+    width:25%;
+    text-align:center;
+    border-radius: 0 5px 5px 0;
+}
+#ui table {
+    margin:0 auto;
+}
+.keypad {
+    border:#67EFE9 2px solid;
+    border-radius:4px;
+    font-size:18px;
+	width:65px;
+	height:55px;
+    line-height:55px;
+	text-align:center;
+    word-wrap:break-word;
+}
+#clear, #submit {
+    line-height: 28px;
+}
+/* gradient button from http://gradients.glrzad.com/ */
+.keypad:active {
+    background:#67EFE9;
+    color:#090708;
+}
+#input {
+  	background: none repeat scroll 0 0 black;
+    border-radius: 24px 24px 24px 24px;
+    font-size: 30px;
+    height: 35px;
+    line-height: 35px;
+    margin: 24px auto 10px;
+    width: 200px;
+}
+#result {
+	height:30px;
+    font-size:18px;
+}
+#buttons {
+    margin-top: 0px;
+}
+#buttons div {
+    border:#67EFE9 2px solid;
+    border-radius:4px;
+    margin:10px 23px;
+    padding:4px 0;
+}
+#buttons div:active, #pauseScreen div:active, #levelComplete div:active, #gameover div:active {
+    background:#67EFE9;
+    color:#090708;
+}
+#pauseScreen {
+    margin-top:40px;
+}
+.resume {
+    margin-bottom:50px;
+}
+#pauseScreen div {
+    border:#67EFE9 2px solid;
+    border-radius:4px;
+    margin:10px auto;
+    padding:8px 0;
+    width:210px;
+}
+#setting2, #shop, #mainmenu, #help2, #effects {
+    position:absolute;
+    text-align:center;
+    width:768px;
+    height:600px;
+}
+#shop {
+    height: 600px;
+    background: url(images/ShopTable.png) ;
+    color:#2374ee;
+}
+#shop .items {
+    margin-top: 290px;
+}
+#shop .items div {
+    float:left;
+    margin:0 20px;
+    width:150px;
+    height:150px;
+}
+#shop img {
+    border:#2374ee 2px solid;
+    border-radius:4px;
+}
+#shop .items div:active {
+    color:red;
+}
+#shop img:active {
+    border:red 2px solid;
+}
+#shop div p {
+    margin:15px 0;
+}
+#shop div span {
+    border:#67EFE9 2px solid;
+    border-radius:4px;
+    padding:4px 25px;
+}
+#shop div span:active {
+    background:#67EFE9;
+    color:#090708;
+}
+.confirm h3:nth-child(1) {
+    margin-top:100px;
+}
+.yes, .no {
+    margin:0 15px;
+}
+#levelComplete,#gameover {
+    width: 500px;
+	height: 221px;
+    position: absolute;
+    top: 120px;
+    text-align: center;
+    left: 140px;
+    opacity: 0.90;
+    border-radius:4px;
+    background:url("images/levelbackground.png") #333;
+    z-index:2;
+}
+#levelComplete div {
+    float: left;
+    border: #67EFE9 2px solid;
+    border-radius: 4px;
+    margin: 0 18px 20px 35px;
+    padding: 8px;
+}
+#help2 div{
+    border: #67EFE9 2px solid;
+    border-radius: 4px;
+    height: 40;
+    width: 80;
+    position: absolute;
+    top:2px;
+    left: 20px;
+}
+#gameover h3 {
+    padding:25px 0 10px 0;
+}
+#gameover div {
+    border: #67EFE9 2px solid;
+    border-radius: 4px;
+    margin: 0 auto;
+    padding: 4px 0;
+    width: 180px;
+}
+#leftPanel {
+    position: absolute;
+    margin: 5px;
+}
+#rightPanel {
+    position: absolute;
+    left: 580px;
+    margin: 5px;
+}

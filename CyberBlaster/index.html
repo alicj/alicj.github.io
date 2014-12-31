@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" id="viewport" content="width=device-width,height=device-height,initial-scale=1.0,user-scalable=no" />
+<script src="libs/jquery191min.js" type="text/javascript"></script>
+<script src="libs/Kinetic.js" type="text/javascript"></script>
+<script src="libs/FormatDate.js" type="text/javascript"></script>
+<script>
+    function closeWindow() {
+        window.open('','_parent','');
+        window.close();
+    }
+</script> 
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Cyber blaster</title>
+</head>
+
+<body>
+    <div class="shadowOverlay"></div>
+    <div class="bgMusic"></div>
+    <div id="main">
+        <!-- Splash Screen is disabled due to the load screen function of Playboo--->
+        <!--<div id="splash">
+            <img id="splash" src="images/logo.jpg" />
+        </div>-->
+        
+    	<div id="menu">
+            <span><h2><span class="bigger">C</span>yber <span class="bigger">B</span>laster</h2></span>
+            <div class="newgame" ><p></p></div>
+            <div class="setting1" ><p></p></div>
+            <div class="help1" ><p></p></div>
+            <div class="highscore" ><p></p></div>
+            <div class="credit"><p></p></div>
+            <!--<div class="exit"><p>exit</p></div>-->
+        </div>
+        
+        <div id="setting1">
+            <h2></h2>
+            <ul>
+                <li class="music"></li>
+                <li class="sound"></li>
+                <li class="bg"></li>
+                <table>
+                    <tr>
+                        <td><li class="lang">Language</li></td>
+                        <td>
+                            <li class="english">English</li>
+                            <li class="french">Français</li>
+                        </td>
+                    </tr>
+                </table>
+            </ul>
+        </div>
+        
+        <div id="help1">
+            <h2></h2>
+            <span class="helpText"></span>
+        </div>
+        
+        <div id="highscore">
+        	<h2></h2>
+            <ul>
+            </ul>
+        </div>
+        
+        <div id="credit">
+            <!--
+            <h2>Art/Désign</h2>
+            <p>JTR Jeux</p>
+            <img src="images/logo.jpg" width="300px"/>
+            
+            <h2>Musique</h2>
+            <p>Chromatic T-Rex</p>
+            <img src="images/music_logo.png" width="200px"/></p>
+            <p>Permission accordée par Ben Prunty</p>
+            
+            <h2>Développeur</h2>
+            <p>Alic Jiang</p>
+            <p>Peter Kim</p>
+            
+            <h2>Bibliothèque</h2>
+            <p>jQuery 1.9.1</p>
+            <p>Kinetic JS 4.5.1</p>
+            
+            <h2>Police</h2>
+            <p>TIE-Wing</p>
+            <p>Marcher à Boba fonts</p>
+            <img src="images/font_logo.png" width="120px"/></p>
+            </h2>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <h2>The people who are crazy enough to think they can change the world, are the ones who do.<br /> <h3>-- Think Different</h3></h2>
+            <h2>seuls ceux qui sont assez fous pour penser qu'ils peuvent changer le monde, y parviennent.<br /> <h3>-- Think Different</h3></h2>
+            -->
+        </div>
+        
+        <div id="save">
+            <div class="save1" onclick="saveData(0)"></div>
+            <span class="delete delete1" onclick="deleteData(0)"></span>
+            <div class="save2" onclick="saveData(1)"></div>
+            <span class="delete delete2" onclick="deleteData(1)"></span>
+            <div class="save3" onclick="saveData(2)"></div>
+            <span class="delete delete3" onclick="deleteData(2)"></span>
+            <div class="save4" onclick="saveData(3)"></div>
+            <span class="delete delete4" onclick="deleteData(3)"></span>
+            <div class="save5" onclick="saveData(4)"></div>
+            <span class="delete delete5" onclick="deleteData(4)"></span>
+            <!--<span class="testmod" onclick="testmod()">TestMod</span>-->
+        </div>
+        
+        <div id="namefield">
+            <div class="save"></div>
+            <h3></h3>
+            <div>
+                <input class="name" type="text" maxlength="8"/>
+                <span class="launch"></span>
+            </div>
+        </div>
+    </div>
+    
+	<div id="gamefield">
+        <div id="myCanvas"></div>
+        
+        <div id="levelComplete">
+            <h3></h3>
+            <div class="nextLevel"></div>
+            <div class="backMain"></div>
+        </div>
+        
+        <div id="gameover">
+        	<h3></h3>
+            <div class="backMain"></div>
+        </div>
+        
+        <div id="leftPanel">
+            <div id="lives">
+                <span class="text"></span>&nbsp;<img src="images/Life.png" height="30" />x<span class="num"></span>
+            </div>
+            <div id="score">
+                <span class="text"></span>&nbsp;<span class="num">0</span>
+            </div>
+        </div>
+        
+        <div id="rightPanel">
+            <span class="text"></span>&nbsp;<span class="level"></span>
+        </div>
+        
+        <div id="shop">
+            <div class="items">
+                <div>
+                    <p class="bomb"></p>
+                    <img class="bomb" src="images/Bomb.jpg" width="100" height="100"/>
+                    <p class="priceBomb"></p>
+                </div>
+                <div>
+                    <p class="shield"></p>
+                    <img class="shield" src="images/Shield.jpg" width="100" height="100"/>
+                    <p class="priceShield"></p>
+                </div>
+                <div>
+                    <p class="life"></p>
+                    <img class="life" src="images/Life.jpg" width="100" height="100"/>
+                    <p class="priceLife"></p>
+                </div>
+                <div>
+                    <p class="freeze"></p>
+                    <img class="freeze" src="images/Freeze.jpg" width="100" height="100"/>
+                    <p class="priceFreeze"></p>
+                </div>
+            </div>
+        </div>
+        
+        <div id="effects"></div>
+        
+        <div id="setting2">
+            <h2></h2>
+            <ul>
+                <li class="music"></li>
+                <li class="sound"></li>
+                <li class="bg"></li>
+                <table>
+                    <tr>
+                        <td><li class="lang">Language</li></td>
+                        <td>
+                            <li class="english">English</li>
+                            <li class="french">Français</li>
+                        </td>
+                    </tr>
+                </table>
+            </ul>
+        </div>
+        
+        <div id="help2">
+            <h2></h2>
+            <span class="helpText"></span>
+        </div>
+        
+        <div id="mainmenu">
+            <span class="confirm"></span>
+            <span class="backMain"></span>
+            <span class="no"></span>
+        </div>
+        
+        <div id="ui">
+            <div id="nonPause">
+                <div id="input"></div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><div  class="keypad" onclick="addNum(7)" id="seven">7</div></td>
+                            <td><div  class="keypad" onclick="addNum(8)" id="eight">8</div></td>
+                            <td><div  class="keypad" onclick="addNum(9)" id="nine">9</div></td>
+                        </tr>
+                        <tr>
+                            <td><div  class="keypad" onclick="addNum(4)" id="four">4</div></td>
+                            <td><div  class="keypad" onclick="addNum(5)" id="five">5</div></td>
+                            <td><div  class="keypad" onclick="addNum(6)" id="six">6</div></td>
+                        </tr>
+                        <tr>
+                            <td><div  class="keypad" onclick="addNum(1)" id="one">1</div></td>
+                            <td><div  class="keypad" onclick="addNum(2)" id="two">2</div></td>
+                            <td><div  class="keypad" onclick="addNum(3)" id="three">3</div></td>
+                        </tr>
+                        <tr>
+                            <td><div  class="keypad" onclick="clean()" id="clear">clear</div></td>
+                            <td><div  class="keypad" onclick="addNum(0)" id="zero">0</div></td>
+                            <td><div  class="keypad" onclick="submit()" id="submit">submit</div></td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div id="buttons">
+                    <div class="pause"></div>
+                    <!--<div class="lives">Lives: 3</div>-->
+                    <div class="numBomb" onclick="bomb()">
+                   		<span class="text"></span>&nbsp;
+                        <span class="num">0</span>
+                    </div>
+                    <div class="numShield" onclick="shield()">
+                    	<span class="text"></span>&nbsp;
+                        <span class="num">0</span>
+                    </div>
+                    <div class="numFreeze" onclick="freeze()">
+                    	<span class="text"></span>&nbsp;
+                        <span class="num">0</span>
+                    </div>
+                </div>
+            </div>
+            <div id="pauseScreen">
+                <img class="resume" src="images/PauseScreen.png" width="200" height="200"/>
+                <div class="shop">Shop</div>
+                <div class="setting2">Setting</div>
+                <div class="help2">Help</div>
+                <div class="mainmenu">Main Menu</div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script>
+        document.addEventListener("touchstart", function(e) { e.preventDefault(); }, false);
+        document.addEventListener("touchmove", function(e) { e.preventDefault(); }, false);
+    </script>
+    <script src="js/langToggle.js" type="text/javascript"></script>
+    <script src="js/variables.js" type="text/javascript"></script>
+    <script src="js/functions.js" type="text/javascript"></script>
+    <script src="js/menuEffects.js" type="text/javascript"></script>
+			
+</body>
+</html>
