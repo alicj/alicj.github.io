@@ -63,7 +63,7 @@ body.loading {
 -----------------------------------------------------------*/
 
 header#header {
-	margin: 0 auto;
+	margin: 0 auto 10px;
 	text-align: center;
 	line-height: 80px;
 	background: white;

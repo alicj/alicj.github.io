@@ -1,6 +1,30 @@
 var page = "home";
 var clicked = false;
 
+PROJECTS = [
+	{
+		title: "title1",
+		type: "computer",
+		content: "content1",
+		date: "2014 Dec 12",
+		view: false
+	},
+	{
+		title: "title5",
+		type: "computer",
+		content: "content5",
+		date: "2014 Dec 14",
+		view: "GlossGallery/index.html"
+	},
+	{
+		title: "title8",
+		type: "computer",
+		content: "content8",
+		date: "2014 Dec 18",
+		view: false
+	}
+]
+
 $(document).on('click', '.navAjax', function (event) {
 	event.preventDefault();
 	if (page == $(this).attr('href').replace("/","")) return false;
@@ -33,7 +57,14 @@ function loadPage(curPage) {
 				$(this).fadeIn('400');
 				$('#ajax-content .pdf').height($('#ajax-content').innerHeight());
 			});
-			break
+			break;
+		case "projects":
+			$('body').removeClass('loading');
+			$("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
+				renderProj(PROJECTS);
+				$(this).fadeIn('400');
+			});
+			break;
 		default:
 			$('body').removeClass('loading');
 			$("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
@@ -51,4 +82,39 @@ function setNavActive(curPage){
 	$('.navAjax').removeClass('current');
 	$('.navAjax[href="/'+curPage+'"]').addClass('current');
 	$('title').html(capitalizeEachWord(curPage.replace("_", " ")) + ' | Alic Jiang');
+}
+
+function renderProj (projList) {
+	$.each(projList, function(index, proj) {
+		console.log(proj);
+		var block = $('<div></div>')
+						.addClass('cd-timeline-block')
+						.append($('<div></div>')
+							.addClass("cd-timeline-img cd-"+proj.type)
+						)
+						.append($('<div></div>')
+							.addClass('cd-timeline-content')
+							.append($('<h2></h2>')
+								.append(proj.title)
+							)
+							.append($('<p></p>')
+								.append(proj.content)
+							)
+							.append($('<span></span>')
+								.addClass('cd-date')
+								.append(proj.date)
+							)
+						);
+		if (proj.view){
+			console.log(proj.view);
+			$(block)
+				.find('.cd-date')
+				.before($('<a></a>')
+					.addClass('cd-read-more')
+					.attr('href', proj.view)
+					.append('View Project')
+				);
+		}
+		$('#cd-timeline').append(block);
+	});
 }
