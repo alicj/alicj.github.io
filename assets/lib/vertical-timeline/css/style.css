@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'ecoico';
+  src:url('../../../fonts/timelineicons/ecoico.eot');
+  src:url('../../../fonts/timelineicons/ecoico.eot?#iefix') format('embedded-opentype'),
+    url('../../../fonts/timelineicons/ecoico.woff') format('woff'),
+    url('../../../fonts/timelineicons/ecoico.ttf') format('truetype'),
+    url('../../../fonts/timelineicons/ecoico.svg#ecoico') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* -------------------------------- 
 
 Primary style
@@ -14,27 +25,10 @@ html * {
   box-sizing: border-box;
 }
 
-body {
-  font-size: 100%;
-  font-family: "Droid Serif", serif;
-  color: #7f8c97;
-  background-color: #e9f0f5;
-}
-
-a {
-  color: #acb7c0;
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-}
-
 img {
   max-width: 100%;
 }
 
-h1, h2 {
-  font-family: "Open Sans", sans-serif;
-  font-weight: bold;
-}
 
 /* -------------------------------- 
 
@@ -59,27 +53,6 @@ Modules - reusable parts of our design
 Main components 
 
 -------------------------------- */
-header {
-  height: 200px;
-  line-height: 200px;
-  text-align: center;
-  background: #303e49;
-}
-header h1 {
-  color: white;
-  font-size: 18px;
-  font-size: 1.125rem;
-}
-@media only screen and (min-width: 1170px) {
-  header {
-    height: 300px;
-    line-height: 300px;
-  }
-  header h1 {
-    font-size: 24px;
-    font-size: 1.5rem;
-  }
-}
 
 #cd-timeline {
   position: relative;
@@ -94,8 +67,8 @@ header h1 {
   top: 0;
   left: 18px;
   height: 100%;
-  width: 4px;
-  background: #d7e4ed;
+  width: 8px;
+  background: #AFDCF8;
 }
 @media only screen and (min-width: 1170px) {
   #cd-timeline {
@@ -136,13 +109,18 @@ header h1 {
 }
 
 .cd-timeline-img {
+  font-family: "ecoico";
+  color: white;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 40px;
-  height: 40px;
+  left: 5px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  background: rgb(70,164,218);
+  box-shadow: 0 0 0 8px #AFDCF8;
 }
 .cd-timeline-img img {
   display: block;
@@ -154,21 +132,22 @@ header h1 {
   margin-left: -12px;
   margin-top: -12px;
 }
-.cd-timeline-img.cd-picture {
+.cd-timeline-img.cd-phone:before {
   background: #75ce66;
 }
-.cd-timeline-img.cd-movie {
-  background: #c03b44;
+.cd-timeline-img.cd-computer:before {
+  content: "";
 }
-.cd-timeline-img.cd-location {
+.cd-timeline-img.cd-email:before {
+  background: #f0ca45;
+}
+.cd-timeline-img.cd-internet:before {
   background: #f0ca45;
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
-    width: 60px;
-    height: 60px;
     left: 50%;
-    margin-left: -30px;
+    margin-left: -16px;
     /* Force Hardware Acceleration in WebKit */
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
@@ -244,10 +223,10 @@ header h1 {
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
-  background: white;
-  border-radius: 0.25em;
+  background: #e7f2fa;
+  border-radius: 0.5em;
   padding: 1em;
-  box-shadow: 0 3px 0 #d7e4ed;
+  box-shadow: 0 3px 1px #d0d0d0;
 }
 .cd-timeline-content:after {
   content: "";
@@ -256,10 +235,11 @@ header h1 {
 }
 .cd-timeline-content h2 {
   color: #303e49;
+  margin-top: 0;
 }
 .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-  font-size: 13px;
-  font-size: 0.8125rem;
+  /*font-size: 13px;*/
+  /*font-size: 0.8125rem;*/
 }
 .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   display: inline-block;
@@ -270,13 +250,13 @@ header h1 {
 }
 .cd-timeline-content .cd-read-more {
   float: right;
-  padding: .8em 1em;
-  background: #acb7c0;
+  padding: .6em 1em;
+  background: #61a9dd;
   color: white;
   border-radius: 0.25em;
 }
 .no-touch .cd-timeline-content .cd-read-more:hover {
-  background-color: #bac4cb;
+  background-color: #8bc0e6;
 }
 .cd-timeline-content .cd-date {
   float: left;
@@ -296,15 +276,15 @@ header h1 {
 @media only screen and (min-width: 768px) {
   .cd-timeline-content h2 {
     font-size: 20px;
-    font-size: 1.25rem;
+    /*font-size: 1.25rem;*/
   }
   .cd-timeline-content p {
     font-size: 16px;
-    font-size: 1rem;
+    /*font-size: 1rem;*/
   }
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
-    font-size: 14px;
-    font-size: 0.875rem;
+    /*font-size: 14px;*/
+    /*font-size: 0.875rem;*/
   }
 }
 @media only screen and (min-width: 1170px) {
@@ -317,7 +297,7 @@ header h1 {
     top: 24px;
     left: 100%;
     border-color: transparent;
-    border-left-color: white;
+    border-left-color: #E7F2FA;
   }
   .cd-timeline-content .cd-read-more {
     float: left;
@@ -328,7 +308,7 @@ header h1 {
     left: 122%;
     top: 6px;
     font-size: 16px;
-    font-size: 1rem;
+    /*font-size: 1rem;*/
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
     float: right;
@@ -338,7 +318,7 @@ header h1 {
     left: auto;
     right: 100%;
     border-color: transparent;
-    border-right-color: white;
+    border-right-color: #E7F2FA;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
     float: right;
