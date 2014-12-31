@@ -133,16 +133,16 @@ Main components
   margin-top: -12px;
 }
 .cd-timeline-img.cd-phone:before {
-  background: #75ce66;
+  content: "";
 }
 .cd-timeline-img.cd-computer:before {
   content: "";
 }
 .cd-timeline-img.cd-email:before {
-  background: #f0ca45;
+  content: "";
 }
 .cd-timeline-img.cd-internet:before {
-  background: #f0ca45;
+  content: "";
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
@@ -292,6 +292,7 @@ Main components
     margin-left: 0;
     padding: 1.6em;
     width: 45%;
+    top: -13px;
   }
   .cd-timeline-content::before {
     top: 24px;
