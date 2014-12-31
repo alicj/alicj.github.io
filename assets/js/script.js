@@ -13,6 +13,7 @@ $(document).ready(function() {
 	loadPage(page);
 });
 
+
 function capitalizeEachWord(str) {
     return str.replace(/\w\S*/g, function(txt) {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
@@ -21,22 +22,21 @@ function capitalizeEachWord(str) {
 
 function loadPage(curPage) {
 	$("#ajax-content").hide();
-    // let individual projects, such as glossGallery, CyberBlasters, etc be seperate pages
-	// switch(curPage){
-	// 	case "":
-	// 		$("#ajax-content").load('assets/pages/index.html', function(){
-	// 			if(clicked) {
-	// 				$(this).fadeIn('400');
-	// 			}else{
-	// 				$(this).show();
-	// 			}
-	// 		});
-	// 		break;
-	// 	default:
-	$("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
-		$(this).fadeIn('400');
-	});
-	// }
+	// Note to myself:
+    // let individual projects, such as glossGallery, 
+    // CyberBlasters, etc be seperate pages
+	switch(curPage){
+		case "resume":
+			$('#ajax-content').height($(document).innerHeight()-$('#header').innerHeight()-$('.footer').innerHeight()-20);
+		default:
+			$("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
+				if(clicked) {
+					$(this).fadeIn('400');
+				}else{
+					$(this).show();
+				}
+			});
+	}
 	setNavActive(curPage);
 }
 
