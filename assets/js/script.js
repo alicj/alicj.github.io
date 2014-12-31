@@ -27,7 +27,13 @@ function loadPage(curPage) {
     // CyberBlasters, etc be seperate pages
 	switch(curPage){
 		case "resume":
-			$('#ajax-content').height($(document).innerHeight()-$('#header').innerHeight()-$('.footer').innerHeight()-20);
+			console.log('ARE YOU NOT ENTERTAINED???')
+			$('#ajax-content').css("min-height", $(document).innerHeight()-$('#header').innerHeight()-$('.footer').innerHeight()-20);
+			$("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
+				$(this).fadeIn('400');
+				$('#ajax-content .pdf').height($('#ajax-content').innerHeight());
+			});
+			break
 		default:
 			$("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
 				if(clicked) {
