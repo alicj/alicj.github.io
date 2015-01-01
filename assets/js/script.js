@@ -92,7 +92,7 @@ function loadPage(curPage) {
 				$(this).fadeIn('400');
 				$('#ajax-content .pdf').height($('#ajax-content').innerHeight());
 				window.setTimeout(function(){
-					$(body).removeClass('loading');
+					$('body').removeClass('loading');
 				}, 2500);
 			});
 			break;
