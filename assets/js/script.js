@@ -62,14 +62,17 @@ PROJECTS = [
 
 $(document).on('click', '.navAjax', function (event) {
 	event.preventDefault();
-	if (page == $(this).attr('href').replace("/","")) return false;
-	page = $(this).attr('href').replace("/","");
+	if (window.location.hash == $(this).attr('href'))
+		return false;
+	window.location.replace($(this).attr('href'));
 	clicked = true;
-	loadPage(page);
+	loadPage();
 });
 
 $(document).ready(function() {
-	loadPage(page);
+	if (!window.location.hash)
+		window.location.replace(window.location + "#home");
+	loadPage();
 });
 
 
@@ -79,7 +82,10 @@ function capitalizeEachWord(str) {
     });
 }
 
-function loadPage(curPage) {
+function loadPage() {
+	curPage = window.location.hash;
+	curPage = curPage.replace("#", "")
+	console.log(curPage)
 	$("#ajax-content").hide();
 	// Note to myself:
     // let individual projects, such as glossGallery, 
