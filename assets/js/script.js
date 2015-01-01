@@ -24,6 +24,8 @@ PROJECTS = [
 		content: "\
 			A gallery made upon professor's request to hold the top animations \
 			written in Haskell submitted from class CS1JC3.\
+			Some responsive design ideas are applied. The gallery mode is \
+			completely written by me.\
 		",
 		date: "May 2014",
 		link: "GlossGallery/index.html"
@@ -44,7 +46,15 @@ PROJECTS = [
 		title: "Cyber Blaster",
 		note: "TechU.me Program",
 		type: "mobile",
-		content: "content8",
+		content: "A program in which I worked with another peer, and a group of Grade Three students who act\
+		as clients. We made an educational web-based app based on their proposal.\
+		This is the first Web App I ever wrote. We learnt JavaScript, HTML, and \
+		<a href='http://en.wikipedia.org/wiki/Systems_development_life_cycle'>SDLC</a> in a month.\
+		The entire development is docummented on a weekly basis, as we applied some Agile and Lean ideas.\
+		Checkout the Github repo <a href='https://github.com/AlicJ/CyberBlaster/'>here</a>.\
+		Also we lunched the app onto a BlackBerry Playbook using \
+		<a href='http://developer.blackberry.com/html5/'>WebWorks</a>.\
+		",
 		date: "Janurary - June 2013",
 		link: "CyberBlaster/index.html"
 	}
@@ -81,6 +91,9 @@ function loadPage(curPage) {
 			$("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
 				$(this).fadeIn('400');
 				$('#ajax-content .pdf').height($('#ajax-content').innerHeight());
+				window.setTimeout(function(){
+					$(body).removeClass('loading');
+				}, 2500);
 			});
 			break;
 		case "projects":
