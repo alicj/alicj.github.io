@@ -46,10 +46,10 @@ PROJECTS = [
         title: "Cyber Blaster",
         note: "TechU.me Program",
         type: "mobile",
-        content: "A program in which I worked with another peer, and a group of Grade Three students who act\
+        content: "A program in which I worked with a high shcool peer, and a group of Grade Three students who act\
         as clients. We made an educational web-based app based on their proposal.\
         This is the first Web App I ever wrote. We learnt JavaScript, HTML, and \
-        <a href='http://en.wikipedia.org/wiki/Systems_development_life_cycle'>SDLC</a> in a month.\
+        <a href='http://en.wikipedia.org/wiki/Systems_development_life_cycle'>SDLC</a> in a month during class independently.\
         The entire development is docummented on a weekly basis, as we applied some Agile and Lean ideas.\
         Checkout the Github repo <a href='https://github.com/AlicJ/CyberBlaster/'>here</a>.\
         Also we lunched the app onto a BlackBerry Playbook using \
