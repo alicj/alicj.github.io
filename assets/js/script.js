@@ -3,6 +3,20 @@ var clicked = false;
 
 PROJECTS = [
     {
+        title: "Gloss Gallery",
+        note: false,
+        type: "internet",
+        content: "\
+            A gallery made upon professor's request to hold the top animations \
+            written in Haskell submitted from class CS1JC3.\
+            Some responsive design ideas are applied. New layout updated in the \
+            start of Janurary, 2015. Github repository can be found \
+            <a href='https://github.com/AlicJ/GlossGallery'>here</a>.\
+        ",
+        date: "Jan 2015/ May 2014",
+        link: "GlossGallery/index.html"
+    },
+    {
         title: "AgentFlux",
         note: "Web Developer Co-op @ AgentFlux Inc.",
         type: "computer",
@@ -12,23 +26,10 @@ PROJECTS = [
             I also worked with Zend Framework to create certain APIs.\
             AgentFlux is an application across all platforms that provides \
             real estate agents a revolutionary way to connect with their clients\
-             - share properties with them and schedule appointments.\
+             - share properties and schedule appointments with them.\
         ",
-        date: "May - August 2014",
+        date: "May - Aug 2014",
         link: "http://agentflux.com/"
-    },
-    {
-        title: "Gloss Gallery",
-        note: false,
-        type: "internet",
-        content: "\
-            A gallery made upon professor's request to hold the top animations \
-            written in Haskell submitted from class CS1JC3.\
-            Some responsive design ideas are applied. The gallery mode is \
-            completely written by me.\
-        ",
-        date: "May 2014",
-        link: "GlossGallery/index.html"
     },
     {
         title: "Vshore Website",
@@ -39,7 +40,7 @@ PROJECTS = [
         automatically in every page. I also made that gallery myself. Didn't know too much about \
         responsive design back then. But the website does not break on a smaller screen.\
         ",
-        date: "October 2013",
+        date: "Oct 2013",
         link: "http://vshore.com/"
     },
     {
@@ -55,7 +56,7 @@ PROJECTS = [
         Also we lunched the app onto a BlackBerry Playbook using \
         <a href='http://developer.blackberry.com/html5/'>WebWorks</a>.\
         ",
-        date: "Janurary - June 2013",
+        date: "Jan - June 2013",
         link: "CyberBlaster/index.html"
     }
 ]
