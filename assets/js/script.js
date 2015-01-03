@@ -92,7 +92,7 @@ function loadPage() {
     switch(curPage){
         case "resume":
             $('body').addClass('loading');
-            $('#ajax-content').css("min-height", $(document).innerHeight()-$('#header').innerHeight()-$('.footer').innerHeight()-20);
+            $('#ajax-content').css("min-height", $(document).innerHeight()-$('#header').innerHeight()-$('.footer').innerHeight()-35);
             $("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
                 $(this).fadeIn('400');
                 $('#ajax-content .pdf').height($('#ajax-content').innerHeight());
