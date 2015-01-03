@@ -16,6 +16,23 @@ body {
   height: 60px;
   background-color: #ebebeb;
 }
+/* Custom footer
+-----------------------------------------------------------*/
+.footer {
+	padding: 16px 0;
+}
+
+.social_icons {
+	float: left;
+}
+
+.social_icons img {
+    opacity: 0.3;
+}
+
+.footer-text {
+	float: right;
+}
 
 
 /* Custom page CSS
@@ -127,20 +144,3 @@ header#header a {
 	border-radius: 50%;
 }
 
-/* Footer
------------------------------------------------------------*/
-.footer {
-	padding: 16px 0;
-}
-
-.social_icons {
-	float: left;
-}
-
-.social_icons img {
-    opacity: 0.3;
-}
-
-.footer-text {
-	float: right;
-}
