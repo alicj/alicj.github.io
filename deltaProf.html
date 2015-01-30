@@ -26,8 +26,12 @@
 		float: left;
 	}
 
+	table {
+		margin: 0 0 15px 0;
+	}
+
 	td {
-		padding: 2px 50px 0 0;
+		padding: 2px 15px 0 0;
 	}
 	</style>
 </head>
@@ -46,87 +50,99 @@
 				<td>
 					<input type="text" class="your" placeholder="Harry Potter">
 				</td>
+				<td>
+					<input type="button" id="fill" name="fill" value="Fill names" />
+				</td>
+				<td>
+					<input type="button" id="copy" name="copy" value="Copy to Clipboard" />
+				</td>
 			</tr>
 		</table>
+
+		<p>
+			<code>
+				Despise the mess in the body, just click "Copy to Clipboard" button, and paste into your gmail
+			</code>
+		</p>
 
 		<h3>Email subject:</h3>
 		<p class="alert alert-success" role="alert">
 			Being a part of deltaHakcs
 		</p>
 
-		<input type="button" id="copy" name="copy" value="Copy to Clipboard" />
-		<button id="my-button" data-clipboard-text="Copy me!">Copy to Clipboard</button>
-
+		<h3>Email body:</h3>
 		<div id="email-content" class="alert alert-info">
-Hello Professor<span class="profName"></span>,
+			Hello Professor<span class="profName"></span>,
 
-I am writing on behave of deltaHacks, the first Canadian Hackathon for Change run by a student club in McMaster. Hackathon is a 24-hour event where university students gather together, using software skills, hardware, or a combination of both to make their amazing ideas come to life. The event will take place from Feb 14th to 15th.
+			I am writing on behave of deltaHacks, the first Canadian Hackathon for Change run by a student club in McMaster. Hackathon is a 24-hour event where university students gather together, using software skills, hardware, or a combination of both to make their amazing ideas come to life. The event will take place from Feb 14th to 15th.
 
-The focus of this hackathon is to encourage students from different faculties to collaborate and combine programming knowledge with their field of interest to make a positive impact on the world, encouraging them to align with tracks of impact such as energy and the environment, health and wellness, inequality and education.
+			The focus of this hackathon is to encourage students from different faculties to collaborate and combine programming knowledge with their field of interest to make a positive impact on the world, encouraging them to align with tracks of impact such as energy and the environment, health and wellness, inequality and education.
 
-I am wondering if you would be interested in coming to our hackathon and give a brief speech about how you apply computer science to your research on ___. I believe your speech would be able to inspire students to make positive impact on your field of study.
+			I am wondering if you would be interested in coming to our hackathon and give a brief speech about how you apply computer science to your research on ___. I believe your speech would be able to inspire students to make positive impact on your field of study.
 
-- Idea Generation Group:
-    Help students determine a field of focus of their projects.
-    You do not have to be present, you can do it through video talks.
+			- Idea Generation Group:
+			Help students determine a field of focus of their projects.
+			You do not have to be present, you can do it through video talks.
 
-- Talk/Workshop:
-    Introduce your work further with demonstrations and in-depth explanation.
+			- Talk/Workshop:
+			Introduce your work further with demonstrations and in-depth explanation.
 
-- Mentor:
-    Guide students on their projects throughout the hackathon.
+			- Mentor:
+			Guide students on their projects throughout the hackathon.
 
-- Judge:
-    Determine which project(s) has the best impact in your field of study.
+			- Judge:
+			Determine which project(s) has the best impact in your field of study.
 
-If there is anyone you think would be interested (like your PhD students), can you please forward this email to them? 
+			If there is anyone you think would be interested (like your PhD students), can you please forward this email to them? 
 
-I appreciate your time and consideration. Please do not hesitate to ask any questions. I am looking forward to discuss with you further about this.
+			I appreciate your time and consideration. Please do not hesitate to ask any questions. I am looking forward to discuss with you further about this.
 
-Regards,
-<span class="yourName"></span>
+			Regards,
+			<span class="yourName"></span>
 		</div>
 	</div>
 
 	<script>
-		$(document).on('keyup', '.prof', function(event) {
-			event.preventDefault();
-			$('.profName').text(" "+$(this).val());
-		});
+	function fill(){
+		$('.profName').text(" "+$(".prof").val());
+		$('.yourName').text($(".your").val());
+	}
 
-		$(document).on('keyup', '.your', function(event) {
-			event.preventDefault();
-			$('.yourName').text($(this).val());
-		});
+	$(document).ready(function() {
+		fill();
+	});
 
-		// var client = new ZeroClipboard($("#copy"));
-		// client.on('copy', function(event) {
-		// 	event.preventDefault();
-		// 	var clipboard = event.clipboardData;
-		// 	clipboard.setData($('#email-content').text());
-		// });
+	$(document).on('click', '#fill', function(event) {
+		event.preventDefault();
+		fill();
+	});
+
+	$(document).on('keyup', 'input', function(event) {
+		event.preventDefault();
+		fill();
+	});
 
 	var client = new ZeroClipboard( $('#copy') );
 
-      client.on( 'ready', function(event) {
-        // console.log( 'movie is loaded' );
+	client.on( 'ready', function(event) {
+		console.log( 'movie is loaded' );
 
-        client.on( 'copy', function(event) {
-          event.clipboardData.setData('text/plain', $("#email-content").text());
-        } );
+		client.on( 'copy', function(event) {
+			event.clipboardData.setData('text/plain', $("#email-content").text());
+		} );
 
-        client.on( 'aftercopy', function(event) {
-        	console.log('Copied text to clipboard: ');
-          console.log(event.data);
-        } );
-      } );
+		client.on( 'aftercopy', function(event) {
+			console.log('Copied text to clipboard: ');
+			console.log(event.data);
+		} );
+	} );
 
-      client.on( 'error', function(event) {
-        // console.log( 'ZeroClipboard error of type "' + event.name + '": ' + event.message );
-        ZeroClipboard.destroy();
-      } );
+	client.on( 'error', function(event) {
+		// console.log( 'ZeroClipboard error of type "' + event.name + '": ' + event.message );
+		ZeroClipboard.destroy();
+	} );
 
-		
+
 	</script>
 
 
