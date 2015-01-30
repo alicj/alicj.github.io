@@ -126,7 +126,7 @@
         // console.log( 'movie is loaded' );
 
         client.on( 'copy', function(event) {
-          event.clipboardData.setData('application/rtf', document.getElementById("email-content").innerHTML);
+          event.clipboardData.setData('text/plain', document.getElementById("email-content").innerHTML);
         } );
 
         client.on( 'aftercopy', function(event) {
