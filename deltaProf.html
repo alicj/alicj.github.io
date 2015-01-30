@@ -99,13 +99,16 @@
 
 			Regards,
 			<span class="yourName"></span>
+			deltaHacks.io
 		</div>
 	</div>
 
 	<script>
 	function fill(){
-		$('.profName').text(" "+$(".prof").val());
-		$('.yourName').text($(".your").val());
+		var prof = $(".prof").val();
+		var your = $(".your").val();
+		$('.profName').text(prof ? " " + prof : "");
+		$('.yourName').text(your);
 	}
 
 	$(document).ready(function() {
