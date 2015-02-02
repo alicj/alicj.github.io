@@ -65,7 +65,7 @@
 			</code>
 		</p>
 
-		<p class="alert alert-info copied hide"></p>
+		<p class="alert alert-info copied"></p>
 
 		<h3>Email subject:</h3>
 		<p class="alert alert-success" role="alert">
@@ -113,6 +113,7 @@ deltaHacks.io
 
 	$(document).ready(function() {
 		fill();
+		$('p.copied').hide();
 	});
 
 	$(document).on('click', '#fill', function(event) {
@@ -137,8 +138,9 @@ deltaHacks.io
 		client.on( 'aftercopy', function(event) {
 			console.log('Copied text to clipboard: ');
 			console.log(event.data);
+			$('p.copied').hide();
 			$('p.copied').html("Tex copied to clipboard");
-			$('p.copied').toggleClass("hide");
+			$('p.copied').fadeIn();
 		} );
 	} );
 
