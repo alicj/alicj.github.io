@@ -18,6 +18,10 @@
 		font-size: 16px;
 	}
 
+	.red {
+		color: red;
+	}
+
 	.profName, .yourName {
 		text-transform: capitalize;
 	}
@@ -56,6 +60,9 @@
 				<td>
 					<input type="button" id="copy" name="copy" value="Copy to Clipboard" />
 				</td>
+				<td>
+					<p class="red copied">Copied</p>
+				</td>
 			</tr>
 		</table>
 
@@ -65,8 +72,6 @@
 			</code>
 		</p>
 
-		<p class="alert alert-info copied"></p>
-
 		<h3>Email subject:</h3>
 		<p class="alert alert-success" role="alert">
 			Being a part of deltaHacks
@@ -74,7 +79,7 @@
 
 		<h3>Email body:</h3>
 		<div id="email-content" class="alert alert-info">
-Hello Professor<span class="profName"></span>,
+<div>Hello Professor<span class="profName"></span>,
 
 I’m a student representative of deltaHacks, the first Canadian Hackathon for Change run by a student club in McMaster. This Hackathon is a 24-hour event where university programmers and entrepreneurs collaboratively bring their amazing ideas to life. Though using software and hardware we hope to make a positive impact on the environment, health and wellness or inequality and education . The event will take place from Feb 14th to 15th.
 
@@ -99,8 +104,8 @@ I appreciate your time and consideration. Please do not hesitate to ask any ques
 
 Regards,
 <span class="yourName"></span>
-deltaHacks.io
-		</div>
+deltaHacks.io</div>
+		<div/>
 	</div>
 
 	<script>
@@ -139,7 +144,6 @@ deltaHacks.io
 			console.log('Copied text to clipboard: ');
 			console.log(event.data);
 			$('p.copied').hide();
-			$('p.copied').html("Tex copied to clipboard");
 			$('p.copied').fadeIn();
 		} );
 	} );
