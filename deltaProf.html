@@ -137,7 +137,7 @@ deltaHacks.io</div>
 		console.log( 'movie is loaded' );
 
 		client.on( 'copy', function(event) {
-			event.clipboardData.setData('text/plain', $("#email-content").text());
+			event.clipboardData.setData('text/plain', $("#email-content div").text());
 		} );
 
 		client.on( 'aftercopy', function(event) {
