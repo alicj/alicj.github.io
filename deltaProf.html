@@ -284,6 +284,11 @@ deltaHacks.io</div>
 		$('p.copied').hide();
 	});
 
+	$(document).on('focus', 'input:text', function(event) {
+		event.preventDefault();
+		$(this).select();
+	});
+
 	$(document).on('click', '#fill', function(event) {
 		event.preventDefault();
 		fill();
