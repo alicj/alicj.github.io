@@ -80,7 +80,7 @@
 		</p>
 
 		<h3>Email subject:</h3>
-		<p class="alert alert-success" role="alert">
+		<p id="subject" class="alert alert-success" role="alert">
 			Being a part of deltaHacks
 		</p>
 
@@ -326,7 +326,27 @@ deltaHacks.io</div>
 		ZeroClipboard.destroy();
 	} );
 
+	var client2 = new ZeroClipboard( $('#subject') );
 
+	client2.on( 'ready', function(event) {
+		console.log( 'movie is loaded' );
+
+		client2.on( 'copy', function(event) {
+			event.clipboardData.setData('text/plain', $("#subject").text());
+		} );
+
+		client2.on( 'aftercopy', function(event) {
+			console.log('Copied text to clipboard: ');
+			console.log(event.data);
+			$('p.copied').hide();
+			$('p.copied').fadeIn();
+		} );
+	} );
+
+	client2.on( 'error', function(event) {
+		// console.log( 'ZeroClipboard error of type "' + event.name + '": ' + event.message );
+		ZeroClipboard.destroy();
+	} );
 
 
 	</script>
