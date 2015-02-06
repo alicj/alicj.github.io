@@ -47,6 +47,22 @@
 	#subject {
 		cursor: pointer;
 	}
+
+	.success, .danger, .info {
+		border-radius: 3px;
+		padding: 6px;
+	}
+
+	.success {
+		border: 2px solid #dff0d8;
+	}
+	.danger {
+		border: 2px solid #e7c3c3;
+	}
+	.info{
+		border: 2px solid #b9def0;
+	}
+
 	</style>
 </head>
 <body>
@@ -71,7 +87,7 @@
 					<input type="button" id="copy" name="copy" value="Copy to Clipboard" />
 				</td>
 				<td>
-					<p class="red copied">Copied</p>
+					<span class="red copied">Copied</span>
 				</td>
 			</tr>
 		</table>
@@ -86,10 +102,10 @@
 
 		<h3>Email subject:</h3>
 		<p><code>subject now supports copy when you click on the green box below</code></p>
-		<p id="subject" class="alert alert-success" role="alert">Being a part of deltaHacks</p>
+		<p id="subject" class="success" role="alert">Being a part of deltaHacks</p>
 
 		<h3>Email body:</h3>
-		<div id="email-content" class="alert alert-info">
+		<div id="email-content" class="info">
 <div>Hello Professor<span class="profName"></span>,
 
 I’m a student representative of deltaHacks, the first Canadian Hackathon for Change run by a student club in McMaster. This Hackathon is a 24-hour event where university programmers and entrepreneurs collaboratively bring their amazing ideas to life. Though using software and hardware we hope to make a positive impact on the environment, health and wellness or inequality and education . The event will take place from Feb 14th to 15th.
@@ -119,7 +135,7 @@ deltaHacks.io</div>
 		</div>
 
 		<h3>If you are using Mac and does not have flash, copy this:</h3>
-		<div id="email-content" class="alert alert-info">
+		<div id="email-content" class="info">
 			Hello Professor<span class="profName"></span>,
 			<br><br>
 			I’m a student representative of deltaHacks, the first Canadian Hackathon for Change run by a student club in McMaster. This Hackathon is a 24-hour event where university programmers and entrepreneurs collaboratively bring their amazing ideas to life. Though using software and hardware we hope to make a positive impact on the environment, health and wellness or inequality and education . The event will take place from Feb 14th to 15th.
@@ -162,7 +178,7 @@ deltaHacks.io</div>
 			<!-- Tab panes -->
 			<div class="tab-content">
 				<div role="tabpanel" class="tab-pane active" id="idea">
-					<div class="alert alert-success">
+					<div class="success">
 						Hello Professor <span class="profName"></span>,
 						<br><br>
 						Fantastic! We are happy to have you on board!
@@ -185,7 +201,7 @@ deltaHacks.io</div>
 					</div>
 				</div>
 				<div role="tabpanel" class="tab-pane" id="talk">
-					<div class="alert alert-success">
+					<div class="success">
 						Hello Professor <span class="profName"></span>,
 						<br><br>
 						Fantastic! We are happy to have you on board!
@@ -208,7 +224,7 @@ deltaHacks.io</div>
 					</div>
 				</div>
 				<div role="tabpanel" class="tab-pane" id="mentor">
-					<div class="alert alert-success">
+					<div class="success">
 						Hello Professor <span class="profName"></span>,
 						<br><br>
 						Fantastic! We are happy to have you on board!
@@ -231,7 +247,7 @@ deltaHacks.io</div>
 					</div>
 				</div>
 				<div role="tabpanel" class="tab-pane" id="judge">
-					<div class="alert alert-success">
+					<div class="success">
 						Hello Professor <span class="profName"></span>,
 						<br><br>
 						Fantastic! We are happy to have you on board!
@@ -262,13 +278,13 @@ deltaHacks.io</div>
 
 
 		<h2>If they reject:</h2>
-		<div class="alert alert-danger">
+		<div class="danger">
 			Hello Professor <span class="profName"></span>,
 			<br><br>
 			Thanks for your reply. We will definitely keep in touch for future events.
 			<br><br>
 			Kind regards,<br>
-			<span class="yourName"></span><br><br>
+			<span class="yourName"></span><br>
 			deltaHacks.io
 		</div>
 		
