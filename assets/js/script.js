@@ -60,16 +60,10 @@ function loadPage() {
 				}, 1500);
 			});
 			break;
-		case "projects":
-			$('body').removeClass('loading');
-			$("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
-				renderProj(PROJECTS);
-				$(this).fadeIn('400');
-			});
-			break;
 		default:
 			$('body').removeClass('loading');
 			$("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
+				if(curPage == "projects") renderProj(PROJECTS);
 				if(clicked) {
 					$(this).fadeIn('400');
 				}else{
@@ -94,7 +88,6 @@ function renderProj (projList) {
 		$(template).find('.title').append(proj.title);
 		$(template).find('.content').append(proj.content);
 		$(template).find('.cd-date').append(proj.date)
-
 
 		if (proj.link){
 			// console.log(proj.link);
