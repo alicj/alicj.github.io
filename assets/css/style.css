@@ -147,19 +147,27 @@ header#header a {
 
 /* Stories page
 --------------------------------------------------------*/
-.panel-heading {
-	cursor: pointer;
-}
-
 #stories {
 	float: none;
 	margin: 0 auto;
 }
 
-.panel-group .panel {
+#stories .panel-heading {
+	cursor: pointer;
+}
+
+#stories .panel-group .panel {
 	margin-bottom: 20px;
 }
 
-.panel-group .panel:last-child {
+#stories .panel-group .panel:last-child {
 	margin-bottom: 0px;
+}
+
+#stories .panel-date:before {
+	content: " - ";
+}
+
+#stories p.panel-note {
+	margin: 6px 0 0;
 }

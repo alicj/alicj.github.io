@@ -20,15 +20,18 @@ var projTemplate = $('<div></div>')
 				);
 
 var storyTemplate = $('<div></div>')
-						.addClass('panel panel-default')
+						.addClass('panel')
 						.append($('<div></div>')
 							.addClass('panel-heading collapsed')
 							.attr({
 								'data-toggle': 'collapse',
 								'data-parent': '#stories'
 							})
-							.append($('<h3></h3>')
+							.append($('<span></span>')
 								.addClass('panel-title')
+							)
+							.append($('<span></span>')
+								.addClass('panel-date')
 							)
 						)
 						.append($('<div></div>')
@@ -133,12 +136,25 @@ function renderProj (projList) {
 
 function renderStory (storyList) {
 	$.each(storyList, function(index, story) {
+		if(!story.display) return;
 		var template = $(storyTemplate).clone();
 
+		$(template).addClass('panel-'+story.type);
 		$(template).find('.panel-heading').attr('href', '#st'+index);
 		$(template).find('.panel-title').append(story.title);
+		$(template).find('.panel-date').append(story.date);
 		$(template).find('.panel-collapse').attr('id', 'st'+index);
 		$(template).find('.panel-body').append(story.content);
+
+		if (story.note) {
+			console.log(story.note);
+			$(template)
+				.find('.panel-date')
+				.after($('<p></p>')
+					.addClass('panel-note text-muted')
+					.append(story.note)
+				);
+		}
 
 		$('#stories').append(template);
 

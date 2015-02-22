@@ -58,17 +58,37 @@ PROJECTS = [
 	}
 ];
 
+/*
+type: 	default		-- light grey
+		primary		-- blue
+		success		-- light green
+		info		-- light blue
+		warning		-- light orange
+		danger		-- light red
+*/
 STORIES = [
 	{
 		title: "story1",
-		note: "",
+		date: "1995 June",
+		note: "note1",
 		content: "story1",
-		date: "1995 June"
+		display: true,
+		type: "default"
 	},
 	{
 		title: "story2",
-		note: "",
+		date: "2010 Oct",
+		note: false,
 		content: "story2",
-		date: "2010 Oct"
+		display: true,
+		type: "success"
 	},
+	{
+		title: "story3",
+		date: "2012 Oct",
+		note: false,
+		content: "story3",
+		display: true,
+		type: "primary"
+	}
 ]
