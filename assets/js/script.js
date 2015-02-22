@@ -19,6 +19,25 @@ var projTemplate = $('<div></div>')
 					)
 				);
 
+var storyTemplate = $('<div></div>')
+						.addClass('panel panel-default')
+						.append($('<div></div>')
+							.addClass('panel-heading collapsed')
+							.attr({
+								'data-toggle': 'collapse',
+								'data-parent': '#stories'
+							})
+							.append($('<h3></h3>')
+								.addClass('panel-title')
+							)
+						)
+						.append($('<div></div>')
+							.addClass('panel-collapse collapse')
+							.append($('<div></div>')
+								.addClass('panel-body')
+							)
+						);
+
 $(document).on('click', '.navAjax', function (event) {
 	event.preventDefault();
 	if (window.location.hash == $(this).attr('href'))
@@ -46,8 +65,7 @@ function loadPage() {
 	curPage = curPage.replace("#", "")
 	$("#ajax-content").hide();
 	// Note to myself:
-	// let individual projects, such as glossGallery, 
-	// CyberBlasters, etc be seperate pages
+	// let individual projects, such as glossGallery, Cyberblaster, etc be seperate pages
 	switch(curPage){
 		case "resume":
 			$('body').addClass('loading');
@@ -64,6 +82,7 @@ function loadPage() {
 			$('body').removeClass('loading');
 			$("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
 				if(curPage == "projects") renderProj(PROJECTS);
+				else if (curPage == "stories") renderStory(STORIES);
 				if(clicked) {
 					$(this).fadeIn('400');
 				}else{
@@ -109,5 +128,19 @@ function renderProj (projList) {
 				);
 		}
 		$('#cd-timeline').append(template);
+	});
+}
+
+function renderStory (storyList) {
+	$.each(storyList, function(index, story) {
+		var template = $(storyTemplate).clone();
+
+		$(template).find('.panel-heading').attr('href', '#st'+index);
+		$(template).find('.panel-title').append(story.title);
+		$(template).find('.panel-collapse').attr('id', 'st'+index);
+		$(template).find('.panel-body').append(story.content);
+
+		$('#stories').append(template);
+
 	});
 }

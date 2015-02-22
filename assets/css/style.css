@@ -145,3 +145,21 @@ header#header a {
 	border-radius: 50%;
 }
 
+/* Stories page
+--------------------------------------------------------*/
+.panel-heading {
+	cursor: pointer;
+}
+
+#stories {
+	float: none;
+	margin: 0 auto;
+}
+
+.panel-group .panel {
+	margin-bottom: 20px;
+}
+
+.panel-group .panel:last-child {
+	margin-bottom: 0px;
+}
