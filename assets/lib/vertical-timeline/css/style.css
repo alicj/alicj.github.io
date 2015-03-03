@@ -133,7 +133,7 @@ Main components
   margin-left: -12px;
   margin-top: -12px;
 }
-.cd-timeline-img.cd-phone:before {
+.cd-timeline-img.cd-mobile:before {
   content: "";
 }
 .cd-timeline-img.cd-computer:before {

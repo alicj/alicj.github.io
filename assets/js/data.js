@@ -1,3 +1,5 @@
+// All projects and stories are in reverse chronological order
+
 PROJECTS = [
 	{
 		title: "Gloss Gallery",
@@ -68,27 +70,43 @@ type: 	default		-- light grey
 */
 STORIES = [
 	{
-		title: "story1",
-		date: "1995 June",
-		note: "note1",
-		content: "story1",
-		display: true,
+		title: "McHacks... and my random thoughts",
+		date: "Feb. 22nd, 2015",
+		note: "",
+		content: "McHacks",
+		display: false,
 		type: "default"
 	},
 	{
-		title: "story2",
-		date: "2010 Oct",
-		note: false,
-		content: "story2",
+		title: "deltaHacks",
+		date: "Feb. 15th, 2015",
+		note: "",
+		content: "deltaHacks",
 		display: true,
 		type: "success"
 	},
 	{
-		title: "story3",
-		date: "2012 Oct",
-		note: false,
-		content: "story3",
+		title: "My personal website and Gloss Gallery",
+		date: "Dec. 2015",
+		note: "",
+		content: "deltaHacks",
 		display: true,
-		type: "primary"
+		type: "success"
+	},
+	{
+		title: "YHacks",
+		date: "Oct. 2nd, 2015",
+		note: "",
+		content: "YHacks",
+		display: true,
+		type: "info"
+	},
+	{
+		title: "YHacks",
+		date: "Oct. 2nd, 2015",
+		note: "",
+		content: "YHacks",
+		display: true,
+		type: "info"
 	}
 ]

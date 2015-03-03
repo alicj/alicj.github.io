@@ -156,12 +156,8 @@ header#header a {
 	cursor: pointer;
 }
 
-#stories .panel-group .panel {
-	margin-bottom: 20px;
-}
-
-#stories .panel-group .panel:last-child {
-	margin-bottom: 0px;
+#stories .panel {
+	margin: 20px 0 0 !important;
 }
 
 #stories .panel-date:before {

@@ -136,8 +136,10 @@ function renderProj (projList) {
 
 function renderStory (storyList) {
 	$.each(storyList, function(index, story) {
-		if(!story.display) return;
+		// make a copy of the template
 		var template = $(storyTemplate).clone();
+		// hide if neccessary
+		if(!story.display) $(template).hide();
 
 		$(template).addClass('panel-'+story.type);
 		$(template).find('.panel-heading').attr('href', '#st'+index);
@@ -159,4 +161,8 @@ function renderStory (storyList) {
 		$('#stories').append(template);
 
 	});
+}
+
+function revealYourSecrete() {
+	$('#stories .panel').show();
 }
