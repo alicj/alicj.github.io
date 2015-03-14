@@ -73,10 +73,10 @@
 
 .pswp__button--arrow--left, .pswp__button--arrow--right {
   background: none;
-  top: 50%;
-  margin-top: -50px;
-  width: 70px;
-  height: 100px;
+/*  top: 50%;
+  margin-top: -50px;*/
+  width: 50%;
+  height: 100%;
   position: absolute; }
 
 .pswp__button--arrow--left {
