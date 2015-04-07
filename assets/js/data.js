@@ -30,18 +30,18 @@ PROJECTS = [
 		date: "May - Aug 2014",
 		link: "http://agentflux.com/"
 	},
-	{
-		title: "Vshore Website",
-		note: false,
-		type: "computer",
-		content: "A website made for Vshore Inc. I used JavaScript to build \
-		several functions to reduce workload, like writting the header and the footer\
-		automatically in every page. I also made that gallery myself. Didn't know too much about \
-		responsive design back then. But the website does not break on a smaller screen.\
-		",
-		date: "Oct 2013",
-		link: "http://vshore.com/"
-	},
+	//{
+	//	title: "Vshore Website",
+	//	note: false,
+	//	type: "computer",
+	//	content: "A website made for Vshore Inc. I used JavaScript to build \
+	//	several functions to reduce workload, like writting the header and the footer\
+	//	automatically in every page. I also made that gallery myself. Didn't know too much about \
+	//	responsive design back then. But the website does not break on a smaller screen.\
+	//	",
+	//	date: "Oct 2013",
+	//	link: "http://vshore.com/"
+	//},
 	{
 		title: "Cyber Blaster",
 		note: "TechU.me Program",
