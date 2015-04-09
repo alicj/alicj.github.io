@@ -36,11 +36,12 @@ PROJECTS = [
 		type: "computer",
 		content: "A website made for Vshore Inc. I used JavaScript to build \
 		several functions to reduce workload, like writting the header and the footer\
-		automatically in every page. I also made that gallery myself. Didn't know too much about \
-		responsive design back then. But the website does not break on a smaller screen.\
+		automatically in every page. A screen capture of the site can be found \
+		<a target='_blank' href='assets/img/vshore.png'>here</a> (the site is no longer live). An upgrade demo of the site \
+		can be found <a target='_blank' href='vshore-demo/index.html'>here</a>, yet it was not implemented due to client's company issue. \
 		",
 		date: "Oct 2013",
-		link: "vshore/index.html"
+		link: "vshore-demo/index.html"
 	},
 	{
 		title: "Cyber Blaster",
