@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Anagram</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="assets/lib/bootstrap/bootstrap.min.css">
+	<script src="assets/lib/bootstrap/bootstrap.min.js"></script>
+	<style>
+		.container {
+			margin: 50px auto;
+		}
+		#updateHint {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form>
+			<input id="anagramInput" type="text" placeholder="race">
+			<input id="anagramSubmit" type="submit" value="Search Anagram">
+		</form>
+		<br>
+		<br>
+		<h4>Please seperate words by comma</h4>
+		<form>
+			<textarea id="listInput" name="" id="" cols="60" rows="10"></textarea>
+			<input id="listSubmit" type="submit" value="Submit Wordlist">
+			<p id="updateHint"  class="alert alert-success" role="alert">Word list updated</p>
+		</form>
+		<hr>
+
+		<div class="alert alert-info" role="alert">
+			<h4>Matching Anagrams:</h4>
+			<ul id="result"></ul>
+		</div>
+		
+	</div>
+
+	<script>
+		var WORDLIST = ["acre", "care", "dad", "mom"];
+
+		function isAnagram(word1, word2) {
+			if (word1.length != word2.length)
+				return false;
+			var charCount = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+			for (var i = 0; i < word1.length; i++) {
+				// offset for ACISS code, a is at 97
+				charCount[word1.charCodeAt(i)-97]++;
+				charCount[word2.charCodeAt(i)-97]--;
+			}
+			for (var i = 0; i < charCount.length; i++) {
+				if (charCount[i] != 0)
+					return false;
+			};
+			return true;
+		}
+
+		function getAnagrams(input) {
+			// create an array of 26 zeroes
+			var result = [];
+			$.each(WORDLIST, function(index, word) {
+				word = word.trim();
+				if (isAnagram(word, input))
+					result.push(word);
+			});
+			return result;
+		}
+
+		function printWords(wordList) {
+			$('#result').html("");
+			if (wordList.length == 0) {
+				$('#result').append("<li>No mathcing</li>");
+			}else{
+				$.each(wordList, function(index, word) {
+					$('#result').append(
+						$("<li></li>").append(word)
+					);
+					console.log(word);
+				});
+			}
+		}
+
+		$(document).on('click', '#anagramSubmit', function(event) {
+			event.preventDefault();
+			var word = $('#anagramInput').val().toLowerCase().trim();
+			var result = getAnagrams(word);
+			console.log(result)
+			printWords(result);
+		});
+
+		$(document).on('click', '#listSubmit', function(event) {
+			event.preventDefault();
+			var list = $('#listInput').val();
+			console.log(list);
+			WORDLIST = list.split(",");
+			console.log(WORDLIST);
+			$('#updateHint').hide();
+			$('#updateHint').fadeIn(400);
+		});
+	</script>
+</body>
+</html>
