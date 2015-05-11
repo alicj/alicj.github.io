@@ -1,0 +1,77 @@
+<html>
+<head>
+	<title>Console Test</title>
+    <script type="text/javascript" src="termlib_min.js"></script>
+    <link rel="stylesheet" type="text/css" href="term_styles.css">
+</head>
+<body>
+
+    <div id="termDiv"></div>
+
+	<script type="text/javascript">
+   var term = new Terminal( 
+        {
+            handler: termHandler,
+            termDiv: 'termDiv',
+        }
+    );
+   term.open();
+
+  function termHandler() {
+    var command = this.lineBuffer;
+    this.newLine();
+    // match the command
+    for (var i=0; i<COMMANDS.length; i++) {
+        if (command == COMMANDS[i].name) {
+            COMMANDS[i].handler();
+            this.prompt();
+            return;
+        }
+    }
+    // otherwise print error
+    this.write("-term: " + command + ": command not found");
+    this.prompt();
+  }
+
+  var COMMANDS = [
+    {
+        // need to work on paser
+        name: "man",
+        handler: function(){}
+    }
+    {
+        name: "help",
+        man: "man page for help",
+        handler: function (args) {
+            term.write(helpPage);
+        }
+    },
+    {
+        name: "about",
+        man: "man page for about"
+        handler: function (args) {
+            term.write(aboutPage);
+        }
+    }
+  ]
+
+  var MAN 
+
+  var aboutPage = [
+    "This is the about me section",
+    "Hello my name is Alic"
+  ];
+
+  var helpPage = [
+    "This is the monstrous help page for my groovy terminal.",
+    "Commands available:",
+    "   help - print this monstrous help page",
+    "   exit - leave this groovy terminal",
+    " ",
+    "Have fun!"
+  ];
+
+
+	</script>
+</body>
+</html>
