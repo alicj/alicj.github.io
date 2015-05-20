@@ -2,6 +2,7 @@
 <head>
 	<title>Console Test</title>
     <script type="text/javascript" src="termlib_min.js"></script>
+    <script type="text/javascript" src="termlib_parser_min.js"></script>
     <link rel="stylesheet" type="text/css" href="term_styles.css">
 </head>
 <body>
@@ -9,67 +10,124 @@
     <div id="termDiv"></div>
 
 	<script type="text/javascript">
-   var term = new Terminal( 
+    // initiate terminal
+    var term = new Terminal( 
         {
-            handler: termHandler,
-            termDiv: 'termDiv',
+            handler: termHandler,   // command handler
+            termDiv: 'termDiv',     // which div to put in
         }
     );
-   term.open();
+    // open terminal
+    term.open();
+    // initiate parser
+    var parser = new Parser();
 
-  function termHandler() {
-    var command = this.lineBuffer;
-    this.newLine();
-    // match the command
-    for (var i=0; i<COMMANDS.length; i++) {
-        if (command == COMMANDS[i].name) {
-            COMMANDS[i].handler();
-            this.prompt();
+    // command handler for the terminal
+    function termHandler() {
+      // print new line
+      this.newLine();
+      // parse the command
+      parser.parseLine(this);
+      if (this.argv.length > 2) {
+        this.write("Sorry, only one argument is supported at the moment.");
+        this.prompt();
+        return;
+      }
+      console.log(this.argv);
+      console.log(this.argc);
+
+      var command = this.argv[this.argc++];
+      // match the command
+      for (var i=0; i<COMMANDS.length; i++) {
+          if (command == COMMANDS[i].name) {
+              COMMANDS[i].handler(this.argv[this.argc]); // only pass the first argument for now
+              this.prompt();
+              return;
+          }
+      }
+      // otherwise print error
+      this.write("-term: " + command + ": command not found");
+      this.prompt();
+    }
+
+    function getMan(args) {
+        if (args == undefined) {
+            term.write("What manual page do you want?");
             return;
         }
+        var argv = args;
+        for (var i=0; i<COMMANDS.length; i++) {
+            if (argv == COMMANDS[i].name) {
+                term.write(COMMANDS[i].man);
+                return;
+            }
+        }
+        term.write("No manual entry for " + argv);
     }
-    // otherwise print error
-    this.write("-term: " + command + ": command not found");
-    this.prompt();
-  }
 
-  var COMMANDS = [
-    {
-        // need to work on paser
-        name: "man",
-        handler: function(){}
-    }
-    {
-        name: "help",
-        man: "man page for help",
-        handler: function (args) {
+    var COMMANDS = [
+      {
+          // need to work on paser
+          name: "man",
+          handler: function(args){
+            getMan(args);
+          }
+      },
+      {
+          name: "help",
+          man: "man page for help",
+          handler: function (args) {
             term.write(helpPage);
-        }
-    },
-    {
-        name: "about",
-        man: "man page for about"
-        handler: function (args) {
+          }
+      },
+      {
+          name: "about",
+          man: "man page for about",
+          handler: function (args) {
             term.write(aboutPage);
+          }
+      },
+      {
+          name: "exit",
+          man: "man page for exit",
+          handler: function (args) {
+            term.close();
+          }
+      },
+      {
+          name: "gui",
+          man: "man page for exit",
+          handler: function (args) {
+            term.close();
+          }
+      }
+    ];
+
+    // sort command by name to optimize search
+    COMMANDS.sort(function (a, b) {
+        if (a.name > b.name) {
+          return 1;
         }
-    }
-  ]
+        if (a.name < b.name) {
+          return -1;
+        }
+        // a must be equal to b
+        return 0;
+    });
 
-  var MAN 
+    var aboutPage = [
+      "This is the about me section",
+      "Hello my name is Alic"
+    ];
 
-  var aboutPage = [
-    "This is the about me section",
-    "Hello my name is Alic"
-  ];
-
-  var helpPage = [
-    "This is the monstrous help page for my groovy terminal.",
-    "Commands available:",
-    "   help - print this monstrous help page",
-    "   exit - leave this groovy terminal",
-    " ",
-    "Have fun!"
-  ];
+    var helpPage = [
+      "This is the monstrous help page for my groovy terminal.",
+      "Commands available:",
+      "   help - print this monstrous help page",
+      "   exit - leave this groovy terminal",
+      " ",
+      "Have fun!"
+    ];
 
 
 	</script>
