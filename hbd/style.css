@@ -1,0 +1,45 @@
+body {
+}
+
+#next, #prev {
+	position: absolute;
+	height: 100%;
+	width: 12%;
+	right: 0;
+	z-index: 100;
+	cursor: pointer;
+}
+
+#prev {
+	left: 0;
+}
+
+#next:hover, #prev:hover {
+	background-color: rgba(0,0,0,0.5);
+}
+
+.piece {
+	position: absolute;
+	display: none;
+    height: 100%;
+    width: 100%;
+}
+
+.piece .container {
+    height: 100%;
+    width: 100%;
+    padding: 8% 16%;
+	background-size: contain;
+	background-image: url('bg.png');
+	background-repeat: repeat-x;
+	background-color: #aaa;
+
+}
+
+.pic {
+	width: 40%;
+}
+
+.text {
+	width: 58%;
+}
