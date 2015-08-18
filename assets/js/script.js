@@ -99,7 +99,7 @@ function loadPage() {
 function setNavActive(curPage){
 	$('.navAjax').removeClass('current');
 	$('.navAjax[href="/'+curPage+'"]').addClass('current');
-	$('title').html(capitalizeEachWord(curPage.replace("_", " ")) + ' | Alic Jiang');
+	$('title').html(capitalizeEachWord(curPage.replace("_", " ")) + ' | Zichen Jiang');
 }
 
 function renderProj (projList) {

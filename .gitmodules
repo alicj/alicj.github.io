@@ -1,9 +1,3 @@
-[submodule "GlossGallery"]
-	path = GlossGallery
-	url = https://github.com/AlicJ/GlossGallery.git
-[submodule "simpleTabs"]
-	path = simpleTabs
-	url = https://github.com/AlicJ/simpleTabs.git
 [submodule "vshore"]
 	path = vshore
 	url = git@github.com:AlicJ/vshore.git
