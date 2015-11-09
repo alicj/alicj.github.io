@@ -4,8 +4,8 @@ PROJECTS = [
 	{
 		title: "CentraCare",
 		note: "DementiaHacks 2015, Toronto",
-		type: "internet",
-		content: "Working with another programmer and three other health science students, we built a prototype for a platform for caregivers to have better understanding of the patients with dementia. Due to the nature of the diesease, the patients tend to avoid social interaction, which is actually necessary for them and would help them stay healthier. So we built this platform for the families of patients to fill out for the caregivers to read prior to their arrival to help build a connection between them and the patient, that they would understand what actions to take under certain circumstances, and have meaningful conversations and realationships with the patiens.",
+		type: "heart",
+		content: "Working with another programmer and three other health science students, we built a prototype for a platform for caregivers to have better understanding of the patients with dementia. Due to the nature of the diesease, the patients tend to avoid social interaction, which is actually necessary for them and would help them stay healthier. So we built this platform for the families of patients to fill out for the caregivers to read prior to their arrival to help build a connection between them and the patient, that they would understand what actions to take under certain circumstances, and have meaningful conversations and realationships with the patients. I learnt Angular JS while building the project, which was super fun during strugling.",
 		date: "Nov 7-8, 2015",
 		link: "https://github.com/Jimicy/CentraCare"
 
@@ -14,7 +14,7 @@ PROJECTS = [
 		title: "Gloss Gallery",
 		note: false,
 		type: "internet",
-		content: "A gallery made upon professor's request to hold the top animations written in Haskell submitted from class CS1JC3. Some responsive design ideas are applied. New layout was updated in the start of Janurary, 2015. Github repository can be found <a href='https://github.com/AlicJ/GlossGallery'>here</a>.",
+		content: "A gallery made upon professor's request to hold the top animations written in Haskell submitted from class CS1JC3. Some responsive design ideas are applied. New layout was updated in Janurary, 2015. Github repository can be found <a href='https://github.com/AlicJ/GlossGallery'>here</a>.",
 		date: "Jan 2015/ May 2014",
 		link: "GlossGallery/index.html"
 	},

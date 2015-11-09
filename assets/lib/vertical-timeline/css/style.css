@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'ecoico';
-  src:url('../../../fonts/timelineicons/ecoico.eot');
-  src:url('../../../fonts/timelineicons/ecoico.eot?#iefix') format('embedded-opentype'),
-    url('../../../fonts/timelineicons/ecoico.woff') format('woff'),
-    url('../../../fonts/timelineicons/ecoico.ttf') format('truetype'),
-    url('../../../fonts/timelineicons/ecoico.svg#ecoico') format('svg');
+  src:url('fonts/timelineicons/ecoico.eot');
+  src:url('../fonts/ecoico.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ecoico.woff') format('woff'),
+    url('../fonts/ecoico.ttf') format('truetype'),
+    url('../fonts/ecoico.svg#ecoico') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -134,16 +134,25 @@ Main components
   margin-top: -12px;
 }
 .cd-timeline-img.cd-mobile:before {
-  content: "";
+  content: "";
 }
 .cd-timeline-img.cd-computer:before {
-  content: "";
+  content: "";
 }
 .cd-timeline-img.cd-email:before {
-  content: "";
+  content: "";
 }
 .cd-timeline-img.cd-internet:before {
+  content: "";
+}
+.cd-timeline-img.cd-person:before {
   content: "";
+}
+.cd-timeline-img.cd-people:before {
+  content: "";
+}
+.cd-timeline-img.cd-heart:before {
+  content: "";
 }
 @media only screen and (min-width: 1170px) {
   .cd-timeline-img {
