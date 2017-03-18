@@ -5,7 +5,7 @@ PROJECTS = [
 		title: "CentraCare",
 		note: "DementiaHacks 2015, Toronto",
 		type: "heart",
-		content: "Working with another programmer and three other health science students, we built a prototype for a platform for caregivers to have better understanding of the patients with dementia. During the building of the project, I learnt and implemented AngularJS, which is super fun despise the struggling. <br/> Due to the nature of the diesease, the patients tend to avoid social interaction, which is actually necessary for them and would help them stay healthier. So we built this platform for the families of patients to fill out for the caregivers to read prior to their arrival to help build a connection between them and the patient, that they would understand what actions to take under certain circumstances, and have meaningful conversations and realationships with the patients.",
+		content: "Working with another programmer and three other health science students, we built a prototype for a platform for caregivers to have better understanding of the patients with dementia. During the building of the project, I learnt and implemented AngularJS, which is super fun despite the struggling. <br/> Due to the nature of the disease, the patients tend to avoid social interaction, which is actually necessary for them and would help them stay healthier. So we built this platform for the families of patients to fill out for the caregivers to read prior to their arrival to help build a connection between them and the patient, that they would understand what actions to take under certain circumstances, and have meaningful conversations and realationships with the patients.",
 		date: "Nov 7-8, 2015",
 		link: "https://github.com/Jimicy/CentraCare"
 
@@ -14,7 +14,7 @@ PROJECTS = [
 		title: "Gloss Gallery",
 		note: false,
 		type: "internet",
-		content: "A gallery made upon professor's request to hold the top animations written in Haskell submitted from class CS1JC3. The website is built for students to show off what they have learnt in the class during the four month, and could be the first step of building a protfolio for them. Some responsive design ideas are applied. New layout was updated in Janurary, 2015. Github repository can be found <a href='https://github.com/AlicJ/GlossGallery'>here</a>.",
+		content: "A gallery made upon professor's request to hold the top animations written in Haskell submitted from class CS1JC3. The website is built for students to show off what they have learnt in the class during the four month, and could be the first step of building a protfolio for them. Some responsive design ideas are applied. New layout was updated in January, 2015. Github repository can be found <a href='https://github.com/AlicJ/GlossGallery'>here</a>.",
 		date: "Jan 2015/ May 2014",
 		link: "GlossGallery/index.html"
 	},
@@ -38,7 +38,7 @@ PROJECTS = [
 		title: "Cyber Blaster",
 		note: "TechU.me Program",
 		type: "mobile",
-		content: "A program in which I worked with a high shcool peer, and a group of Grade Three students who actas clients. We made an educational web-based app based on their proposal.This is the first Web App I ever wrote. We learnt JavaScript, HTML, and <a href='http://en.wikipedia.org/wiki/Systems_development_life_cycle'>SDLC</a> in a month during class independently.The entire development is docummented on a weekly basis, as we applied some Agile and Lean ideas. Checkout the Github repo <a href='https://github.com/AlicJ/CyberBlaster/'>here</a>. Also we lunched the app onto a BlackBerry Playbook using <a href='http://developer.blackberry.com/html5/'>WebWorks</a>.",
+		content: "A program in which I worked with a high school peer, and a group of Grade Three students who actas clients. We made an educational web-based app based on their proposal.This is the first Web App I ever wrote. We learnt JavaScript, HTML, and <a href='http://en.wikipedia.org/wiki/Systems_development_life_cycle'>SDLC</a> in a month during class independently.The entire development is docummented on a weekly basis, as we applied some Agile and Lean ideas. Checkout the Github repo <a href='https://github.com/AlicJ/CyberBlaster/'>here</a>. Also we lunched the app onto a BlackBerry Playbook using <a href='http://developer.blackberry.com/html5/'>WebWorks</a>.",
 		date: "Jan - June 2013",
 		link: "CyberBlaster/index.html"
 	}
