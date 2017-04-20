@@ -2,9 +2,9 @@
 
 Hello, my name is Alic. I was a past Relations member (2014), Head of Logistics (2015), and Sponsor Representative (2016) for DeltaHacks. As a Relation member, I contacted over 100 McMaster professors from different departments to enrich hack ideas for attendees. As Head of Logistics, I learnt how to oversee projects in a macro-perspective which will assist me to direct the DeltaHacks team better. As a sponsor representative, I experienced DeltaHacks in a different point of view and will be able to provide unique feedback to improve DeltaHacks experience for sponsors.
 
-This year’s DeltaHacks team did a fantastic job on the overall planning and executing. The ceremonies, the food, the post clean-up - every part of the hackathon is a big step up from last year. And I want to make next year a year to remember. For next year, I aim for [better team management](#better-team-management), [stronger external communication](#stronger-external-communication), and [superior overall experience](#superior-overall-experience).
+This year’s DeltaHacks team did a fantastic job on the overall planning and executing! The ceremonies, the food, the post clean-up - every part of the hackathon is a big step up from last year! And I want to make next year a year to remember. For next year, I aim for [better team management](#better-team-management), [stronger external communication](#stronger-external-communication), and [superior overall experience](#superior-overall-experience).
 
-Better Team management
+Better Team Management
 --
 I will create a transparent and uniform communication channel for teams. I want to have bi-weekly general meetings between leader of each team with the co-directors to update status with each other. Then, each leader will update their team with the general status which ensures all members are up-to-date. This will ensure that teams are working tightly and cooperatively and eliminate communication barriers. The teams will work more efficiently if they are aware of the big picture. For example, a more informed team can avoid sending duplicate emails.
 
