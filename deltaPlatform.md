@@ -6,28 +6,49 @@ This year’s DeltaHacks team did a fantastic job on the overall planning and ex
 
 Better Team Management
 --
+#####Transparent and Uniform Communication Channel
 I will create a transparent and uniform communication channel for teams. I want to have bi-weekly general meetings between leader of each team with the co-directors to update status with each other. Then, each leader will update their team with the general status which ensures all members are up-to-date. This will ensure that teams are working tightly and cooperatively and eliminate communication barriers. The teams will work more efficiently if they are aware of the big picture. For example, a more informed team can avoid sending duplicate emails.
 
+#####Team Bonding Events
 I also seek to improve bonds between team members. I propose that we have monthly social events. For example, we could get together and enjoy movie nights, rock climbing, bowling, etc.. This will help team members to get to know each other better, resulting in a more harmonious team atmosphere.
 
+#####Help Members Grow
 To help team members grow, team leaders should have a short monthly one-on-one meeting with each team members. In a 10-15 minutes meeting, leaders will ask the members on their general feeling towards the team and any positive/negative feedback. This will help leaders to improve their way of managing. It will also give a channel for members to voice themselves.
 
 Stronger External Communication
 --
-I want to create a uniform and timely communication with sponsors and mentors. We need to update them with important information in a timely manner. We need also make sure that we communicate consistent information with them.
+#####Timely Communication
+We need to update them with important information in a timely manner. Chris, the head of sponsor team from Indellient, received the email asking about his interest of being a judge two days prior to the hackathon. This created an unprofessional image for DH team, as such email would have served better if it was send at least a week earlier. I will work with the Head of Relations to set hard deadlines on each type of email sent to our sponsors and mentors, to make sure that they have enough time to arrange for our request.
+
+#####Professional Image
+On top of that, I will also create emailing protocols with the Head of Relations, to ensure we communicate in a professional and consistent manner. Such as methods to ensure  For example, I received two emails for mentor sign-up this year, from different people with different forms. It was quite confusing and rendered an unprofessional image for DH team. Later, I found out that it was because people from different teams were confused about their responsibility and thus contacted some people twice. Having emailing protocols outlining things such as how to mark contacts in different status will avoid contacting them twice.
 
 
 Superior Overall Experience
 --
+#####More Mentors and Judges
 I want to increase the amount of mentors and judges. With a hack-for-change theme, we need to have at least 10-15 professional mentors and judges from different industries (health care, environment, government, infrastructure, etc.). In order to accomplish this, we need to start contacting them early, preferably in summer or at the latest, September.
 
+#####More Balanced Budget
 I seek to create a more balanced budget. For example, we had brilliantly designed stickers this year, but they ran out quickly; we also had excessive leftovers after each meal. We need to find ways to balance out the spending on each item, so that we don’t overspend or underspend.
 
+#####Female Oriented Advertising
 We had an impressive female ratio this year. I want to continue motivating female attendees. For instance, we could have some female targeted advertising throughout the year. We could post “Female Computer Scientist of the week” on our Facebook page, have female oriented posters, and even work with Thode library to showcase more female their storyboard. We could also look for more female mentors.
 
+&nbsp;
+--
 In conclusion, I strive to create better team management, stronger external communication, and superior overall experience for next year. Should you have any questions, please do not hesitate to contact me. You can message me on slack or email me at jiangz26@mcmaster.ca. Thank you for reading my platform!
 
 #Q&A
+
+Strength and Weakness
+--
+I am able to see the big picture while maintaining abilities to complete specific task. My past experience as Head of Logistics really trained my ability to oversee projects in a macro-perspective. I improved the logistic planning process from 2014 significantly. I categorized the tasks, arranged them by priorities, and assigned them to the appropriate people. I also drafted several budgets to suit different financial needs. I handled the timeline well that there was no last minute rush on big decisions such as food, bus, or venue booking.
+
+I can also handle stress and pressure well. I can quickly analyse urgent situations, make rational decisions, and execute accordingly in a timely manner. For example, in 2014, I was given the job to purchase 40 power bars on the week of the hackathon. We needed them within 5 days on a very limited budget. I found an affordable source and completed the purchase within 24 hours.
+
+On the contrary, I can be too focused on specificity and minute detail regarding tasks. However, my past experience of being Head of Logistics has taught me to step back and to see the bigger picture regularly.Moreover, this disadvantage becomes advantageous in some situations. For instance, when there aren’t enough people, I can easily jump in and complete some task quickly and efficiently. 
+
 
 Commitment
 --
