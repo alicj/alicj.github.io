@@ -19,28 +19,6 @@ var projTemplate = $('<div></div>')
 						)
 					);
 
-var storyTemplate = $('<div></div>')
-						.addClass('panel')
-						.append($('<div></div>')
-							.addClass('panel-heading collapsed')
-							.attr({
-								'data-toggle': 'collapse',
-								'data-parent': '#stories'
-							})
-							.append($('<span></span>')
-								.addClass('panel-title')
-							)
-							.append($('<span></span>')
-								.addClass('panel-date')
-							)
-						)
-						.append($('<div></div>')
-							.addClass('panel-collapse collapse')
-							.append($('<div></div>')
-								.addClass('panel-body')
-							)
-						);
-
 $(document).on('click', '.navAjax', function (event) {
 	event.preventDefault();
 	if (window.location.hash == $(this).attr('href'))
@@ -85,7 +63,7 @@ function loadPage() {
 			$('body').removeClass('loading');
 			$("#ajax-content").load('assets/pages/'+curPage+'.html', function(){
 				if(curPage == "projects") renderProj(PROJECTS);
-				else if (curPage == "stories") renderStory(STORIES);
+				else if (curPage == "experience") renderProj(EXPERIENCE);
 				if(clicked) {
 					$(this).fadeIn('400');
 				}else{
@@ -106,10 +84,10 @@ function renderProj (projList) {
 	$.each(projList, function(index, proj) {
 		// console.log(proj);
 		var template = $(projTemplate).clone();
-		$(template).find('.cd-timeline-img').addClass('cd-'+proj.type);
-		$(template).find('.title').append(proj.title);
-		$(template).find('.content').append(proj.content);
-		$(template).find('.cd-date').append(proj.date)
+		$(template).find('.cd-timeline-img').html('<i class="'+ proj.icon + '"></i>');
+		$(template).find('.title').html(proj.title);
+		$(template).find('.content').html(proj.content);
+		$(template).find('.cd-date').html(proj.date)
 
 		if (proj.link){
 			// console.log(proj.link);
@@ -119,7 +97,7 @@ function renderProj (projList) {
 					.addClass('cd-read-more')
 					.attr('href', proj.link)
 					.attr('target', "_blank")
-					.append('View Project')
+					.html('More details')
 				);
 		}
 		if (proj.note){
@@ -127,42 +105,9 @@ function renderProj (projList) {
 				.find('.content')
 				.before($('<p></p>')
 					.addClass('text-muted')
-					.append(proj.note)
+					.html(proj.note)
 				);
 		}
 		$('#cd-timeline').append(template);
 	});
-}
-
-function renderStory (storyList) {
-	$.each(storyList, function(index, story) {
-		// make a copy of the template
-		var template = $(storyTemplate).clone();
-		// hide if neccessary
-		if(!story.display) $(template).hide();
-
-		$(template).addClass('panel-'+story.type);
-		$(template).find('.panel-heading').attr('href', '#st'+index);
-		$(template).find('.panel-title').append(story.title);
-		$(template).find('.panel-date').append(story.date);
-		$(template).find('.panel-collapse').attr('id', 'st'+index);
-		$(template).find('.panel-body').append(story.content);
-
-		if (story.note) {
-			console.log(story.note);
-			$(template)
-				.find('.panel-date')
-				.after($('<p></p>')
-					.addClass('panel-note text-muted')
-					.append(story.note)
-				);
-		}
-
-		$('#stories').append(template);
-
-	});
-}
-
-function revealYourSecrete() {
-	$('#stories .panel').show();
 }

@@ -145,25 +145,45 @@ header#header a {
 	border-radius: 50%;
 }
 
-/* Stories page
+.cd-timeline-content {
+    box-shadow: 0 3px 3px #d0d0d0;
+}
+
+/* Experience page
 --------------------------------------------------------*/
-#stories {
-	float: none;
-	margin: 0 auto;
+#experience .cd-timeline-content {
+	background-color: #D8F4E7;
 }
 
-#stories .panel-heading {
-	cursor: pointer;
+#experience .cd-timeline-content .cd-read-more {
+	background-color: #3AC080;
 }
 
-#stories .panel {
-	margin: 20px 0 0 !important;
+#experience .cd-timeline-content .cd-read-more:hover {
+  background-color: #67D4A0;
 }
 
-#stories .panel-date:before {
-	content: " - ";
+#experience .cd-timeline-img {
+    background: #2AB572;
+    box-shadow: 0 0 0 8px #76DAAA;
 }
 
-#stories p.panel-note {
-	margin: 6px 0 0;
+#experience #cd-timeline::before {
+    background: #76DAAA;
+}
+
+#experience .cd-timeline-content::before {
+    border: 7px solid transparent;
+    border-right: 7px solid #D8F4E7;
+}
+
+@media only screen and (min-width: 1170px) {
+  #experience .cd-timeline-content::before {
+    border-color: transparent;
+    border-left-color: #D8F4E7;
+  }
+  #experience .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    border-color: transparent;
+    border-right-color: #D8F4E7;
+  }
 }
