@@ -38,6 +38,14 @@ EXPERIENCE = [
 ]
 
 PROJECTS = [
+	// {
+	// 	title: "DeltaHacks",
+	// 	note: "",
+	// 	icon: "deltahacks",
+	// 	content: ``,
+	// 	date: "2014-2017",
+	// 	link: "https://deltahacks.com"
+	// },
 	{
 		title: "Coffee Bot",
 		note: "Indellient",
@@ -96,17 +104,17 @@ PROJECTS = [
 		date: "Jan 2015/May 2014",
 		link: "GlossGallery/index.html"
 	},
-	{
-		title: "Vshore Website",
-		note: false,
-		icon: "fas fa-globe",
-		content: `A website made for Vshore Inc. I used JavaScript to build several functions to 
-		reduce workload, like writting the header and the footer automatically in every page. A screen 
-		capture of the site can be found  <a target='_blank' href='assets/img/vshore.png'>here</a> 
-		(the site is no longer live).`,
-		date: "Oct 2013",
-		link: "vshore-demo/index.html"
-	},
+	// {
+	// 	title: "Vshore Website",
+	// 	note: false,
+	// 	icon: "fas fa-globe",
+	// 	content: `A website made for Vshore Inc. I used JavaScript to build several functions to 
+	// 	reduce workload, like writting the header and the footer automatically in every page. A screen 
+	// 	capture of the site can be found  <a target='_blank' href='assets/img/vshore.png'>here</a> 
+	// 	(the site is no longer live).`,
+	// 	date: "Oct 2013",
+	// 	link: "vshore-demo/index.html"
+	// },
 	{
 		title: "Cyber Blaster",
 		note: "TechU.me Program",
